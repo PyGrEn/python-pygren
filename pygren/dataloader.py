@@ -1,3 +1,10 @@
+"""
+dataloader.py
+
+Created by David Arsenault, Brett Beaudoin and Ryan Freckleton, The MITRE Corporation
+Approved for Public Release; Distribution Unlimited. 13-3052
+ ©2014 - The MITRE Corporation. All rights reserved.
+"""
 import collections
 import urllib
 import zlib
