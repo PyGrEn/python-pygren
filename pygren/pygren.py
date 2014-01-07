@@ -3,7 +3,7 @@
 """
 pygren.py
 
-Created by Brett Beaudoin and Ryan Freckleton, The MITRE Corporation
+Created by David Arsenault, Brett Beaudoin and Ryan Freckleton, The MITRE Corporation
 Approved for Public Release; Distribution Unlimited. 13-3052
  ©2014 - The MITRE Corporation. All rights reserved.
 
