@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include pygren/web *
+recursive-include pygren/conf *

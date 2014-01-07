@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>PyGrEn Query Tool</title>
+<link type="text/css" rel="stylesheet" href="css/redmond/jquery-ui-1.8.20.custom.css" />
+<link type="text/css" rel="stylesheet" href="css/pygren.css" />
+</head>
+<body>
+
+<!-- Tabs -->
+<h2 class="headers">PyGrEn Query Tool</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#traversetab">Traverse/Look Around</a><img id="loadingtraverse" src="/images/waiting.gif" class="waiting"></li>
+		<li><a href="#sqltab">SQL Query</a><img id="loadingsql" src="/images/waiting.gif" class="waiting"></li>
+		<li><a href="#scantab">Scan</a><img id="loadingscan" src="/images/waiting.gif" class="waiting"></li>
+		<li><a href="#apitab">API</a></li>
+	</ul>
+
+	<div id="traversetab">
+		<form>
+		<table width="100%">
+			<tr>
+				<td colspan="5">
+					Query History: <select id="traverseHistory" class="queryHistory"></select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<fieldset>
+						<legend>Subject:</legend>
+						<input type="text" placeholder="e.g. <http://mitre.org/people/Brett_Beaudoin>" id="traverseFrom" class="ui-autocomplete-input self-labeled" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>Predicate(s):</legend>
+						<input type="text" value="*" id="traversePred" class="ui-autocomplete-input self-labeled" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>Object (optional):</legend>
+						<input type="text" placeholder="e.g. <http://mitre.org/people/David_Arsenault>" id="traverseTo" class="ui-autocomplete-input self-labeled" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>Max Distance:</legend>
+						<select id="traverseDist" style="float:left; width:100px">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						</select>
+					</fieldset>
+				</td>
+				<td>
+					<input type="submit" value="GO" id="sendTraverse" class="submitbutton" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5">
+					<div id="traverseProgress"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter" colspan="5">
+					Download results:
+					<input type="button" id="buttonResultsTraverse_GML" value="GML" class="resultsbutton" />
+					<input type="button" id="buttonResultsTraverse_JSON" value="JSON" class="resultsbutton" />
+					<input type="button" id="buttonResultsTraverse_List" value="List" class="resultsbutton" />
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="topcenter" colspan="5">
+					<div class="resultsdiv ui-widget-content ui-corner-all" id="traverseResults"></div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="topcenter" colspan="5">
+					<div class="gallery" id="graphViz"></div>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<div id="sqltab">
+		<form>
+		<table width="100%">
+			<tr>
+				<th>
+					Query History: <select id="sqlHistory" class="queryHistory"></select>
+				</th>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<textarea rows="8" cols="100" id="sql"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<input type="submit" value="QUERY" id="sendSQL"> <br/>
+					<div id="sqlProgress"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<div class="resultsdiv ui-widget-content ui-corner-all" id="sqlResults"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<input type="button" id="buttonResultsSQL" value="Download Results" class="resultsbutton" />
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<div id="scantab">
+		<form onsubmit="return false">
+		<table width="100%">
+			<tr>
+				<td class="topcenter">
+					<input type="text" id="scanVert" placeholder="Enter a search string..." style="width:300" class="self-labeled" />
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<div class="resultsdiv ui-widget-content ui-corner-all" id="scanResults"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="topcenter">
+					<input type="button" id="buttonResultsScan" value="Download Results" class="resultsbutton" />
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<div id="apitab">
+		<div id="apitable" class="datatable"></div>
+	</div>
+</div>
+
+<!-- template for paragraph tag -->
+<div class="pTemplate" style="display:none;"></div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/d3.layout.js"></script>
+<script type="text/javascript" src="js/d3.geom.js"></script>
+
+<script type="text/javascript">
+const intervalLong = 1000; //ms between server requests
+const intervalShort = 200; //ms between server requests
+const statusTextOrig = "Processing...";
+var statusText = statusTextOrig;
+var w = 1;
+var h = 1;
+var qStmts = new Array(); // Array of query statements
+var step = 0;
+var timerScan;
+var timerScanLoader;
+var scanResults = new Object();
+var timerTraverse;
+var whatToViz = "traverse";
+var queryHistory = new Object();
+var defaultValues = new Object();
+var pctDone = new Object();
+var showWhichTab = "";
+var preds; // Get these from the server
+var verts = new Object();
+var queryTypes = ["sql", "scan", "traverse"];
+
+/********************************************************************************************************
+* This function executes when the page has loaded
+********************************************************************************************************/
+$(document).ready(function() {
+	// Tabs
+	$('#tabs').show();
+	$('#tabs').tabs();
+
+	// Bind the submit buttons
+	$("input#sendSQL").bind('click', function(){ return sendSQL(); });
+	$("input#sendTraverse").bind('click', function(){ return sendTraverse(); });
+
+	// Bind the results buttons
+	$("input#buttonResultsSQL").bind('click', function(){ getResults("sql", "json"); });
+	$("input#buttonResultsScan").bind('click', function(){ getResults("scan", "json"); });
+	$("input#buttonResultsTraverse_GML").bind('click', function(){ getResults("traverse", "gml"); });
+	$("input#buttonResultsTraverse_JSON").bind('click', function(){ getResults("traverse", "json"); });
+	$("input#buttonResultsTraverse_List").bind('click', function(){ getResults("traverse", "list"); });
+
+	// Focus on the first form field
+	$("#traverseFrom").focus();
+
+	// Bind tabs
+	$('a[href|="#traversetab"]').bind('click', function(){ $("#traverseFrom").focus() });
+	$('a[href|="#scantab"]').bind('click', function(){ $("#scanVert").focus(); });
+	$('a').bind('click', function(event){
+		if (event.srcElement != undefined && event.srcElement.hash != undefined){
+			rememberTab(event.srcElement.hash);
+		}
+	});
+
+	// Bind the "resize" event to the window
+	$(window).resize( resizeViz );
+
+	// Bind the "SCAN" text input
+	$("input#scanVert").bind('keyup change',
+		function(){
+			clearTimeout(timerScan);
+			clearTimeout(timerScanLoader);
+			var q = $("input#scanVert")[0].value;
+			q = $.trim(q);
+			if (q.length >= 1){
+				$("img#loadingscan").show();
+				timerScanLoader = setTimeout("$('img#loadingscan').hide()", intervalShort);
+				timerScan = setTimeout("sendScan()", intervalLong);
+			}
+		});
+
+	// Bind the query history drop-downs
+	$(".queryHistory").bind("change mousedown",
+		function(event){
+			if ((event.type == "change" && event.srcElement.length > 1) || (event.type == "mousedown" && event.srcElement.length == 1)){
+				var val = event.srcElement.value;
+				var form = event.srcElement.form;
+				if (event.srcElement.id == "traverseHistory"){
+					var q = JSON.parse(val);
+					//{'vertfrom': vf, 'predicate': e, 'dist': d, 'vertto': vt});
+					$("#traverseFrom").val(q.vertFrom); 	// Vertex
+					$("#traversePred").val(q.predicate); 	// Predicate (wildcard = *)
+					$("#traverseDist").val(q.maxDist); 		// Maximum distance to look
+					$("#traverseTo").val(q.vertTo); 		// Vertex
+				}
+				else{
+					$(form).find("textarea").val(val);
+				}
+
+				$.each($("input[id^='traverse']"), function(index, e){
+					if (e.value == "" || e.value == defaultValues[e.id]){
+						e.value = defaultValues[e.id];
+						$(e).addClass("self-labeled");
+						$(e).removeClass("self-labeled-focus");
+					}
+					else {
+						$(e).removeClass("self-labeled");
+						$(e).addClass("self-labeled-focus");
+					}
+				});
+			}
+		});
+
+	// Disable results buttons and radios
+	disable(".resultsbutton");
+	disable("input:radio");
+
+	// Add the "align" attribute in case the browser doesn't fully support CSS
+	$("td.topcenter").attr("align", "center");
+	$("td.middlecenter").attr("align", "center");
+
+	// Store the default values of some form inputs
+	$.each($(".self-labeled"), function(index, e){
+		defaultValues[e.id] = e.value;
+	});
+
+	// Bind the Look-around text inputs
+	$(".self-labeled").bind("focus click", function(event){
+		if (event.srcElement != undefined){
+			var e = event.srcElement;
+			if (e.value == defaultValues[e.id]){
+				e.value = "";
+			}
+			if (e.value != defaultValues[e.id]){
+				$(e).removeClass("self-labeled");
+				$(e).addClass("self-labeled-focus");
+			}
+		}
+	});
+	$(".self-labeled").bind("blur change", function(event){
+		if (event.srcElement != undefined){
+			var e = event.srcElement;
+			if (e.value == "" || e.value == defaultValues[e.id]){
+				e.value = defaultValues[e.id];
+				$(e).addClass("self-labeled");
+				$(e).removeClass("self-labeled-focus");
+			}
+			else {
+				$(e).removeClass("self-labeled");
+				$(e).addClass("self-labeled-focus");
+			}
+		}
+	});
+
+	// Get the API info
+	getAPI();
+
+	// Switch to a specific tab based on a cookie
+	showWhichTab = $.cookie("showWhichTab");
+	if (showWhichTab != ""){
+		$('a[href|="' + showWhichTab + '"]').click();
+	}
+
+	// Override jQuery autocomplete so we only have 15 items in list maximum
+	$.ui.autocomplete.prototype._renderMenu = function( ul, items ) {
+	   var self = this;
+	   $.each( items, function( index, item ) {
+		  if (index < 15) // here we define how many results to show
+			 {self._renderItem( ul, item );}
+		  });
+	}
+
+	// Change all submit buttons style
+	$(".submitbutton").attr("style", "width: 50px; height: 50px; font-size: 42px;");
+
+	// Load previous queries from cookie
+	loadQueryHistory();
+});
+
+/********************************************************************************************************
+* Misc functions
+********************************************************************************************************/
+function addMessage(parentObject, text){
+	$(".pTemplate").clone()
+		.removeClass("pTemplate")
+		.html(text)
+		.appendTo(parentObject)
+		.hide()
+		.fadeIn();
+}
+function resetMessages(parentObject){
+	$(parentObject).html("");
+	$(".pTemplate").clone()
+		.removeClass("pTemplate")
+		.html(statusTextOrig)
+		.appendTo(parentObject)
+		.show();
+}
+function enable(identifier){
+	$(identifier).removeAttr("disabled");
+	$(identifier).css("cursor", "pointer");
+}
+function disable(identifier){
+	$(identifier).attr("disabled", "disabled");
+	$(identifier).css("cursor", "default");
+}
+function setDefaultValue(input){
+	var val = "";
+}
+function rememberTab(tabHrefValue){
+	$.cookie("showWhichTab", tabHrefValue);
+}
+function getAPI(){
+	$.getJSON("/api.json", function(data) {
+		var table = $("<table><tr><td>METHOD</td><td>ROUTE</td><td>COMMENTS</td><td>EXAMPLE</td></tr></table>");
+		for (i in data.api){
+			var route = data.api[i];
+			var row = $("<tr></tr>");
+
+			var cell1 = $("<td></td>").text(route.method);
+			var cell2 = $("<td></td>").text(route.route);
+			var cell3 = $("<td></td>").text(route.comments);
+			var cell4 = $("<td></td>");
+
+			if (route.link == true){
+				var a = $("<a></a>").text(route.example).attr("href", route.example);
+				cell4.append(a);
+			} else {
+				cell4.text(route.example);
+			}
+			// e.g.: {"method": "GET", "route": "/api.(html|json)", "comments": "Displays the API in HTML or JSON format", "example": "/api.html", "link": false}
+			row.append(cell1);
+			row.append(cell2);
+			row.append(cell3);
+			row.append(cell4);
+			table.append(row);
+		}
+		$( "#apitable" ).html(table);
+	});
+}
+function getResults(whichResults, format){
+	if (format == "raw"){
+		$.getJSON("/query/results/" + whichResults + "/tsv", function(data) {
+			var res = data.results.replace(/\n\r?/g, '<br />');
+			$("#" + whichResults + "Results").html(res);
+		});
+	}
+	else{
+		document.location.href = "/query/results/" + whichResults + "/" + format + "/download";
+	}
+}
+function urlEncode(url){
+	while(url.indexOf('%') >= 0) url = url.replace('%', 'PercentSign');
+	return encodeURI(url)
+}
+function hideLoadingImg(id){
+	$("img#" + id).hide();
+}
+function rememberQuery(type, query){
+	try{
+		var idx = queryHistory[type].indexOf(query);
+		while (idx >= 0){
+			queryHistory[type].splice(idx, 1);
+			idx = queryHistory[type].indexOf(query);
+		}
+		queryHistory[type].reverse();
+		queryHistory[type].push(query);
+		queryHistory[type].reverse();
+		makeHistoryDropDown(type);
+		$.cookie("qh_" + type, JSON.stringify(queryHistory[type]));
+	}
+	catch(err){
+		var e = err;
+	}
+}
+function makeHistoryDropDown(type){
+	var select = $("#" + type + "History");
+	$(select).empty();
+	$(select).append($("<option></option>").val("").html("Select one..."));
+	var h = queryHistory[type];
+	//h.reverse();
+	for (i in h){
+		$(select).append($("<option></option>").val(h[i]).html(h[i]));
+	}
+	$(select).prop("selectedIndex", 0);
+}
+function loadQueryHistory(){
+	for (i in queryTypes){
+		var type = queryTypes[i];
+		try{
+			var qh = JSON.parse($.cookie("qh_" + type));
+			if (qh == undefined || !qh || qh.length == 0){
+				queryHistory[type] = [];
+			}
+			else{
+				queryHistory[type] = qh;
+			}
+			makeHistoryDropDown(type);
+		}
+		catch(err){
+			queryHistory[type] = [];
+		}
+	}
+}
+
+function htmlEncode(value){
+	return $('<div/>').text(value).html();
+}
+
+function htmlDecode(value){
+	return $('<div/>').html(value).text();
+}
+
+function setProgressBar(indentifier, val){
+	$(indentifier)
+		.progressbar({value:val})
+		.children('.ui-progressbar-value')
+		.html(val.toPrecision(3) + '%')
+		.css("display", "block");
+}
+
+/********************************************************************************************************
+* Traversal
+********************************************************************************************************/
+function sendTraverse(loadingImage, sendButton){
+	pctDone.traverse = 0;
+	enable("#traverseResults");
+	setProgressBar("#traverseProgress", 0);
+	$("img#loadingtraverse").show();
+	disable(".resultsbutton");
+	disable(sendButton);
+	setTimeout("hideLoadingImg('#loadingtraverse')", 5*60*1000); // Hide the animated "waiting" image after 5 minutes
+
+	var vf = $("#traverseFrom")[0].value; 	// Vertex
+	if (vf == defaultValues.traverseFrom){
+		alert("Invalid query");
+	}
+	else{
+		var e = $("#traversePred")[0].value; 	// Predicate (wildcard = *)
+		var d = $("#traverseDist")[0].value; 	// Maximum distance to look around
+		var vt = $("#traverseTo")[0].value; 	// Vertex
+		if (e == "") e = "*";
+		if (vt == defaultValues.traverseTo){
+			vt = "";
+		}
+		var q = JSON.stringify({'vertFrom': vf, 'predicate': e, 'maxDist': d, 'vertTo': vt});
+		rememberQuery("traverse", q);
+
+		resetMessages($("#traverseResults"));
+
+		$.post("/query/new",  {q: q, queryType: "traverse"}, function(data) {  getTraverseResults(data); } );
+	}
+	return false;
+}
+function getTraverseResults(){
+	$.getJSON("/query/results/traverse/list", function(data) {  checkTraverseData(data) });
+}
+function checkTraverseData(data){
+	if (data.pctdone != undefined && data.pctdone.slaves != undefined && data.pctdone.slaves >= 0 && data.pctdone.slaves > pctDone.sql){
+		setProgressBar("#traverseProgress", data.pctdone.slaves/2);
+		pctDone.sql = data.pctdone.slaves/2;
+	}
+	if (data.pctdone == undefined || data.pctdone.slaves == undefined || data.pctdone.slaves < 100){
+		// Not done, so check again
+		setTimeout("getTraverseResults()", intervalShort);
+	}
+	else{
+		// The slaves are done, but do we have results yet?
+		if ( data.pctdone.master == undefined || data.pctdone.master < 100){
+			// No results yet, so check again
+			setTimeout("getTraverseResults()", intervalShort);
+			if ( data.pctdone.master == undefined || data.pctdone.master <= 0){
+				setProgressBar("#traverseProgress", data.pctdone.slaves/2);
+				pctDone.sql = data.pctdone.slaves/2;
+			}
+			else{
+				setProgressBar("#traverseProgress", 50 + data.pctdone.master/2);
+				pctDone.sql = 50 + data.pctdone.master/2;
+			}
+		}
+		else{
+			setProgressBar("#traverseProgress", 100);
+			pctDone.traverse = 100;
+
+			// We have results, so display them and show "download" buttons
+			addMessage($("#traverseResults"), "Query processing complete.");
+			$("#sendTraverse").removeAttr("disabled");
+			enable(".resultsbutton");
+			enable("input:radio");
+			statusText = statusTextOrig; // Reset to original value
+
+			$("#loadingtraverse").hide();
+			enable("#buttonResultsTraverse");
+
+			displayTriples(data.results, $("#traverseResults"));
+		}
+	}
+}
+
+
+/********************************************************************************************************
+* SQL
+********************************************************************************************************/
+function sendSQL(){
+	pctDone.sql = 0;
+	enable("#sqlResults");
+	setProgressBar("#sqlProgress", 0);
+	$("img#loadingsql").show();
+	disable("#buttonResultsSQL");
+	setTimeout("hideLoadingImg('loadingsql')", 2*60*1000); // Hide the animated "waiting" image after 2 minutes
+	var q = $("#sql")[0].value;
+	q = $.trim(q);
+	rememberQuery("sql", q);
+	//var url = "/db/execute/" + urlEncode(q);
+	//$.get(url, function(data) { gotSQLResults(data); });
+	$.post("/query/new",  { q: q, queryType: "sql" }, function(data) {  getSQLResults(data); } );
+	resetMessages($("#sqlResults"));
+	return false;
+}
+function getSQLResults(){
+	$.getJSON("/query/results/sql/list", function(data) {  checkSqlData(data) });
+}
+function checkSqlData(data){
+	if (data.pctdone != undefined && data.pctdone.slaves != undefined && data.pctdone.slaves >= 0 && data.pctdone.slaves > pctDone.sql){
+		setProgressBar("#sqlProgress", data.pctdone.slaves/2);
+		pctDone.sql = data.pctdone.slaves/2;
+	}
+	if (data.pctdone == undefined || data.pctdone.slaves == undefined || data.pctdone.slaves < 100){
+		// Not done, so check again
+		setTimeout("getSQLResults()", intervalShort);
+	}
+	else{
+		// The slaves are done, but do we have results yet?
+		if ( data.pctdone.master == undefined || data.pctdone.master < 100){
+			// No results yet, so check again
+			setTimeout("getSQLResults()", intervalShort);
+			if ( data.pctdone.master == undefined || data.pctdone.master <= 0){
+				setProgressBar("#sqlProgress", data.pctdone.slaves/2);
+				pctDone.sql = data.pctdone.slaves/2;
+			}
+			else{
+				setProgressBar("#sqlProgress", 50 + data.pctdone.master/2);
+				pctDone.sql = 50 + data.pctdone.master/2;
+			}
+		}
+		else{
+			setProgressBar("#sqlProgress", 100);
+			pctDone.sql = 100;
+
+			// We have results, so display them and show "download" buttons
+			$("#loadingsql").hide();
+			enable("#buttonResultsSQL");
+
+			displayTriples(data.results, $("#sqlResults"));
+		}
+	}
+}
+
+/********************************************************************************************************
+* Scan
+********************************************************************************************************/
+function sendScan(){
+	pctDone.scan = 0;
+	var q = $("#scanVert")[0].value;
+	q = $.trim(q);
+	rememberQuery("scan", q);
+	if (q in scanResults){
+		showScanResults(scanResults[q])
+	} else{
+		$("img#loadingscan").show();
+		disable("#buttonResultsScan");
+		setTimeout("hideLoadingImg('loadingscan')", 2*60*1000); // Hide the animated "waiting" image after 2 minutes
+		$.post("/query/new",  { q: q, queryType: "scan" }, function(data) {  getScanResults(data); } );
+		resetMessages($("#scanResults"));
+	}
+	return false;
+}
+function getScanResults(){
+	$.getJSON("/query/results/scan/list", function(data) {  checkScanData(data) });
+}
+function checkScanData(data){
+	if (data.pctdone != undefined && data.pctdone.slaves != undefined && data.pctdone.slaves >= 0 && data.pctdone.slaves > pctDone.scan){
+		setProgressBar("#scanProgress", data.pctdone.slaves/2);
+		pctDone.scan = data.pctdone.slaves/2;
+	}
+	if (data.pctdone == undefined || data.pctdone.slaves == undefined || data.pctdone.slaves < 100){
+		// Not done, so check again
+		setTimeout("getScanResults()", intervalShort);
+	}
+	else{
+		// The slaves are done, but do we have results yet?
+		if ( data.pctdone.master == undefined || data.pctdone.master < 100){
+			// No results yet, so check again
+			setTimeout("getScanResults()", intervalShort);
+			if ( data.pctdone.master == undefined || data.pctdone.master <= 0){
+				setProgressBar("#scanProgress", data.pctdone.slaves/2);
+				pctDone.scan = data.pctdone.slaves/2;
+			}
+			else{
+				setProgressBar("#scanProgress", 50 + data.pctdone.master/2);
+				pctDone.scan = 50 + data.pctdone.master/2;
+			}
+		}
+		else{
+			setProgressBar("#scanProgress", 100);
+			pctDone.scan = 100;
+
+			// We have results, so display them and show "download" buttons
+			$("#loadingscan").hide();
+			enable("#buttonResultsScan");
+
+			displayTriples(data.results, $("#scanResults"));
+		}
+	}
+}
+
+function displayTriples(results, domElement){
+	var resultsArray = new Array();
+	for (var i in results){
+		var thisRow = [];
+		for (var j in results[i]){
+			var thisCol = results[i][j];
+			var thisColCleaned = htmlEncode(JSON.stringify(thisCol));
+			while (thisColCleaned.indexOf('"') >= 0){
+				thisColCleaned = thisColCleaned.replace('"', '');
+			}
+			thisRow.push(thisColCleaned);
+		}
+		resultsArray.push(thisRow.join(" ") + " .");
+	}
+	$(domElement).html("<div>" + resultsArray.join("</div><div>") + "</div>");
+}
+
+/********************************************************************************************************
+* Visualization
+********************************************************************************************************/
+var fill = d3.scale.category20();
+var viz, vizTimer;
+var wViz = 800;
+var hViz = 600;
+var rDot = 5;
+
+function initViz(){
+	$("#graphViz").html("");
+	viz = d3.select("#graphViz").append("svg")
+	.attr("width", wViz)
+	.attr("height", hViz);
+}
+
+function resizeViz(){
+	var hWindow = $(window).height();
+	wViz = $("#traversetab").width();
+	hViz = Math.max(400, hWindow-150);
+	$("#graphViz").children("svg").eq(0).width(wViz);
+	$("#graphViz").children("svg").eq(0).height(hViz);
+}
+
+function getViz(){
+	initViz();
+	d3.json("/query/results/traverse/d3js", function(data) {
+		var json = data.results;
+		// e.g.: {"edges": [{"edge": "has_email", "target": 1, "weight": 2, "source": 0}], "verts": ["Brett Beaudoin", "bbeaudoin@mitre.org"]}
+		resizeViz();
+		var force = self.force = d3.layout.force()
+			.nodes(json.verts)
+			.links(json.edges)
+			.linkDistance(30)
+			.linkStrength(0.5)
+			.friction(0.8)
+			.gravity(0.05)
+			.distance(100)
+			.charge(-100)
+			.size([wViz, hViz])
+			.start();
+
+		var link = viz.selectAll("line.link")
+			.data(json.edges)
+			.enter().append("svg:line")
+			.style("stroke-width", function(d) { return d.weight/2; })
+			.attr("class", "link")
+			.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+
+		var node = viz.selectAll("g.node")
+			.data(json.verts)
+			.enter().append("svg:g")
+			.attr("class", "node")
+			.call(force.drag);
+
+		node.append("svg:image")
+			.attr("class", "circle")
+			.attr("xlink:href", "/images/ballblue.png")
+			//.attr("xlink:href", "/images/" + function(d) { return d.vert } + ".png")
+			.attr("x", "-" + rDot + "px")
+			.attr("y", "-" + rDot + "px")
+			.attr("width", 2*rDot + "px")
+			.attr("height", 2*rDot + "px");
+
+		var label = node.append("svg:text")
+			.attr("class", "verttext")
+			.attr("dx", 12)
+			.attr("dy", ".35em")
+			.text(function(d) { d.vert });
+
+		force.on("tick", function() {
+			node.attr("cx", function(d) { return d.x = Math.max(rDot, Math.min(wViz - rDot, d.x)); })
+				.attr("cy", function(d) { return d.y = Math.max(rDot, Math.min(hViz - rDot, d.y)); });
+
+			link.attr("x1", function(d) { return d.source.x; })
+				.attr("y1", function(d) { return d.source.y; })
+				.attr("x2", function(d) { return d.target.x; })
+				.attr("y2", function(d) { return d.target.y; });
+
+		  node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+		});
+
+	});
+}
+
+</script>
+
+</html>

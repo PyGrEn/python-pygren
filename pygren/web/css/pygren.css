@@ -1,0 +1,148 @@
+div.filename { color: #000 }
+div.filename:hover {
+    color: #00e;
+    cursor: pointer;
+}
+a:hover { color: #00e }
+span.best_in_place:hover {
+    color: #00e;
+    cursor: pointer;
+}
+/*demo page css*/
+body {
+    font: 62.5% "Trebuchet MS", sans-serif;
+    margin: 20px;
+}
+.headers { margin-top: 0.5em }
+ul#icons {
+    margin: 0;
+    padding: 0;
+}
+ul#icons li {
+    margin: 2px;
+    position: relative;
+    padding: 4px 0;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+ul#icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+div#tabs { width: 100%; display:none }
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+    -webkit-box-align: center;
+    text-align: center;
+    cursor: pointer;
+}
+input[type=text]{
+	width: 300px;
+}
+.resultsbutton {
+	cursor: pointer;
+}
+.vizbutton {
+	cursor: pointer;
+}
+circle.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+line.link {
+    stroke: #999;
+    stroke-opacity: .6;
+    stroke-linecap: round;
+}
+.verttext {
+    pointer-events: none;
+    font: 10px sans-serif;
+}
+.edgetext {
+    pointer-events: none;
+    font: 10px sans-serif;
+}
+.resultsdiv {
+    text-align: left;
+    color: #2e6e9e;
+    padding: 5px;
+    font: 125% "Courier New", monospace;
+}
+.waiting {
+    margin: 7px 2px 2px 1px;
+    display: none;
+}
+.self-labeled{
+    color: #88a;
+    font-style:italic;
+}
+.self-labeled-focus {
+    color: #000;
+    font-style:normal;
+}
+.queryHistory {
+	width: 600px;
+}
+td .topcenter{
+	vertical-align: top;
+	text-align: center;
+}
+td .middlecenter{
+	vertical-align: middle;
+	text-align: center;
+}
+fieldset {
+	border-color: #ccd;
+	border-style: solid;
+	border-width: 1px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.submitbutton {
+	float: right;
+	width: 50px;
+	height: 50px;
+	font-size: 42px;
+}
+
+.datatable {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color: #bbb;
+}
+.datatable table{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.datatable tr:nth-child(odd){
+	background-color: #eee;
+}
+.datatable tr:nth-child(even){
+	background-color: #fff;
+}
+.datatable td{
+	vertical-align: top;
+	text-align: left;
+	padding: 2px 2px 4px 4px;
+}
+.datatable tr:first-child td{
+	background-color: #ccc;
+	text-align: center;
+	font-weight: bold;
+}
+.datatable a{
+	color: #37b;
+}
+
+.ui-progressbar-value {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    padding-top: 2px;
+    padding-left: 6px;
+}

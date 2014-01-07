@@ -1,0 +1,4801 @@
+@prefix : <http://semanticbible.org/ns/2006/NTNames#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ntind: <http://www.semanticbible.org/2005/09/NTN-individuals.owl#> .
+@prefix ntnames: <http://semanticbible.org/ns/2006/NTNames.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rss: <http://purl.org/rss/1.0/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://semanticbible.org/ns/2006/NTNames> a owl:Ontology ;
+    rdfs:comment "Changes in this version: - discontinued use of owl:sameAs fordifferent descriptions of the same person. These are now listed as a single instance, with multiple name_en values, and a single rdfs:label which is (sort of) canonical. -minor corrections"@en,
+        "Maintenance note: the underlying ontology (NTNames.owl) is still under development, so it's important the owl:imports statement stays up-to-date -- Sean 2005-02-13"@en,
+        """The names here are as
+transliterated in the English Standard Version (ESV), copyright ©
+2001 by Crossway Bibles, a division of Good News Publishers.
+
+Reuse note: where feasible, class names coincide with SUMO (Suggested
+Upper Merged Ontology), as developed within the IEEE Standard Upper
+Ontology Working Group, described at http://www.ontologyportal.org/,
+and available as OWL at http://reliant.teknowledge.com/DAML/SUMO.owl
+(But Not Without Some Problems). I've copied, rather than re-used, but
+this provides a future migration path toward coordinating the two
+ontologies.
+
+Location data taken from http://bbs.keyhole.com/ubb/showthreaded.php/Cat/0/Number/517264.
+
+"""@en ;
+    owl:imports <http://www.semanticbible.org/2006/11/NTNames.owl> ;
+    owl:versionInfo "1.0"^^xsd:string,
+        "2006-09"@en .
+
+:Adramyttium a :City ;
+    rdfs:label "Adramyttium"@en .
+
+:Adriatic a :SaltWaterArea ;
+    rdfs:label "Adriatic"@en .
+
+:Aenon a :LandArea ;
+    rdfs:label "Aenon"@en .
+
+:Akeldama a :LandArea ;
+    rdfs:label "Akeldama"@en .
+
+:Alexandrians a :ResidenceGroup ;
+    rdfs:label "Alexandrians"@en .
+
+:Almighty a :God ;
+    rdfs:label "Almighty"@en ;
+    rdfs:comment "\"Eli\" is Aramaic for \"My God\". "^^xsd:string .
+
+:Alpha a :Character ;
+    rdfs:label "Alpha"@en .
+
+:Antioch a :City ;
+    rdfs:label "Antioch"@en ;
+    :location :AntiochGeodata .
+
+:AntiochInPisidia a :City ;
+    rdfs:label "Antioch"@en,
+        "Antioch in Pisidia"@en ;
+    :location :AntiochInPisidiaGeodata ;
+    rdfs:comment "This Antioch is located in the Pisidian region of Asia Minor, a different place from the town of the same name in Syria"@en .
+
+:Antipas a :Man ;
+    rdfs:label "Antipas"@en ;
+    :description "a martyr"^^xsd:string .
+
+:Appius a :City ;
+    rdfs:label "Appius"@en .
+
+:Arabia a :Region ;
+    rdfs:label "Arabia"@en .
+
+:Arabians a :EthnicGroup ;
+    rdfs:label "Arabians"@en .
+
+:Aramaic a :NaturalLanguage ;
+    rdfs:label "Aramaic"@en .
+
+:Areopagite a :PoliticalAttribute ;
+    rdfs:label "Areopagite"@en .
+
+:Areopagus a :PoliticalOrganization ;
+    rdfs:label "Areopagus"@en .
+
+:Armageddon a :City ;
+    rdfs:label "Armageddon"@en .
+
+:Artemis a :SupernaturalBeing ;
+    rdfs:label "Artemis"@en .
+
+:Asians a :EthnicGroup ;
+    rdfs:label "Asians"@en .
+
+:Asiarchs a :GroupOfPeople ;
+    rdfs:label "Asiarchs"@en .
+
+:Assassins a :PoliticalOrganization ;
+    rdfs:label "Assassins"@en .
+
+:Assos a :City ;
+    rdfs:label "Assos"@en ;
+    :location :AssosGeodata .
+
+:Athenians a :ResidenceGroup ;
+    rdfs:label "Athenians"@en .
+
+:Attalia a :City ;
+    rdfs:label "Attalia"@en ;
+    :location :AttaliaGeodata .
+
+:AugustanCohort a :PoliticalOrganization ;
+    rdfs:label "Augustan Cohort"@en ;
+    rdfs:comment "A Roman legion."@en .
+
+:Augustus a :Man ;
+    rdfs:label "Augustus"@en ;
+    :description "Emperor of Rome at the time of Jesus' birth"^^xsd:string ;
+    :occupation "emperor"^^xsd:string .
+
+:Babylon a :City ;
+    rdfs:label "Babylon"@en ;
+    :location :BabylonGeodata ;
+    rdfs:comment "Babylon also has a metaphorical usage as a symbol of the world system opposed to God"@en .
+
+:Barak a :Man ;
+    rdfs:label "Barak"@en ;
+    :description "an Old Testament military leader from the book of Judges"^^xsd:string ;
+    :name_en "Barak"^^xsd:string ;
+    :occupation "general"^^xsd:string .
+
+:BethanyBeyondtheJordan a :City ;
+    rdfs:label "Bethany beyond the Jordan"@en ;
+    :location :BethanyBeyondtheJordanGeodata ;
+    rdfs:comment "Distinguished from the Bethany near Jerusalem: since the time of Origen, the location has been unknown."@en .
+
+:Bithynia a :StateOrProvince ;
+    rdfs:label "Bithynia"@en .
+
+:Blastus a :Man ;
+    rdfs:label "Blastus"@en ;
+    :description "the chamberlain of Herod Agrippa"^^xsd:string ;
+    :knows :HerodAgrippaI ;
+    :occupation "chamberlain"^^xsd:string .
+
+:Boanerges a :GroupOfPeople ;
+    rdfs:label "Boanerges"@en,
+        "Sons of Thunder"@en ;
+    rdfs:comment "Jesus' nickname for two of his disciples: James, the son of Zebedee, and John, his brother."@en .
+
+:Caiphas a :Man ;
+    rdfs:label "Caiphas"@en ;
+    rdfs:comment "see Caiaphas"@en .
+
+:Cananaean a :PoliticalAttribute ;
+    rdfs:label "Cananaean"@en ;
+    rdfs:comment "This attribute is only used by Matthew and Mark to describe Simon, one of Jesus' disciples. Given what else we know of Simon, it almost certainly designates a political attribute, rather than ethnicity."@en .
+
+:Cappadocia a :StateOrProvince ;
+    rdfs:label "Cappadocia"@en .
+
+:Cauda a :Island ;
+    rdfs:label "Cauda"@en .
+
+:Chaldeans a :EthnicGroup ;
+    rdfs:label "Chaldeans"@en .
+
+:Chios a :Island ;
+    rdfs:label "Chios"@en .
+
+:Chloe a :Woman ;
+    rdfs:label "Chloe"@en ;
+    :hasOnlyGenealogyMention false ;
+    rdfs:comment "\"Chloe's people\" are mentioned in 1Cor.1.11: so while they were clearly Christians who knew the church in Corinth, nothing more specific is known about her. She may have resided in Ephesus instead of Corinth. "^^xsd:string .
+
+:Christian a :ReligiousBelief ;
+    rdfs:label "Christian"@en .
+
+:Christians a :BeliefGroup ;
+    rdfs:label "Christians"@en .
+
+:Cilicia a :StateOrProvince ;
+    rdfs:label "Cilicia"@en .
+
+:Claudius a :Man ;
+    rdfs:label "Claudius"@en ;
+    :description "One of the emperors of Rome"^^xsd:string ;
+    :occupation "emperor"^^xsd:string .
+
+:Cnidus a :City ;
+    rdfs:label "Cnidus"@en ;
+    :location :CnidusGeodata .
+
+:Colossae a :City ;
+    rdfs:label "Colossae"@en ;
+    :location :ColossaeGeodata .
+
+:Corinthians a :ResidenceGroup ;
+    rdfs:label "Corinthians"@en .
+
+:Cos a :City ;
+    rdfs:label "Cos"@en ;
+    :location :CosGeodata .
+
+:Cretans a :EthnicGroup ;
+    rdfs:label "Cretans"@en .
+
+:Crete a :Island ;
+    rdfs:label "Crete"@en .
+
+:Crispus a :Man ;
+    rdfs:label "Crispus"@en ;
+    :description "a Corinthian Christian, and former ruler of the synagogue there"^^xsd:string ;
+    :knows :Aquila,
+        :GaiusOfCorinth,
+        :Priscilla,
+        :Silas,
+        :Timothy ;
+    rdfs:comment "As a prominent member of the church at Corinth, it seems reasonable to assume Crispus would know the other people from Corinth mentioned in the New Testament. "^^xsd:string .
+
+:Cyprus a :Island ;
+    rdfs:label "Cyprus"@en .
+
+:Cyrene a :City ;
+    rdfs:label "Cyrene"@en .
+
+:Cyrenians a :ResidenceGroup ;
+    rdfs:label "Cyrenians"@en .
+
+:Dalmanutha a :City ;
+    rdfs:label "Dalmanutha"@en ;
+    :location :DalmanuthaGeodata .
+
+:Dalmatia a :StateOrProvince ;
+    rdfs:label "Dalmatia"@en .
+
+:Daniel a :Man ;
+    rdfs:label "Daniel"@en ;
+    :description "an Old Testament prophet"^^xsd:string ;
+    :occupation "prophet"^^xsd:string .
+
+:Dionysius a :Man ;
+    rdfs:label "Dionysius"@en ;
+    rdfs:comment "Though nothing else is recorded about Dionysius, the exclusivity and prestige of the Areopagus makes his descriptive surname significant. "@en .
+
+:Egyptians a :EthnicGroup ;
+    rdfs:label "Egyptians"@en .
+
+:Elamites a :EthnicGroup ;
+    rdfs:label "Elamites"@en .
+
+:Ephesian a :ResidencyAttribute ;
+    rdfs:label "Ephesian"@en .
+
+:Ephesians a :ResidenceGroup ;
+    rdfs:label "Ephesians"@en .
+
+:Epicurean a :ReligiousBelief ;
+    rdfs:label "Epicurean"@en .
+
+:Ethiopia a :Nation ;
+    rdfs:comment "Not named in the New Testament."@en .
+
+:Ethiopians a :EthnicGroup ;
+    rdfs:label "Ethiopians"@en .
+
+:Euphrates a :FreshWaterArea ;
+    rdfs:label "Euphrates"@en .
+
+:FairHavens a :SaltWaterArea ;
+    rdfs:label "Fair Havens"@en ;
+    :location :FairHavensGeodata .
+
+:Freedmen a :GroupOfPeople ;
+    rdfs:label "Freedmen"@en .
+
+:Gabbatha a :LandArea ;
+    rdfs:label "Gabbatha"@en .
+
+:Gabriel a :Angel ;
+    rdfs:label "Gabriel"@en .
+
+:Gadarenes a :ResidenceGroup ;
+    rdfs:label "Gadarenes"@en .
+
+:Galatia a :StateOrProvince ;
+    rdfs:label "Galatia"@en .
+
+:Galatians a :ResidenceGroup ;
+    rdfs:label "Galatians"@en .
+
+:Galileans a :ResidenceGroup ;
+    rdfs:label "Galileans"@en .
+
+:Gentiles a :GroupOfPeople ;
+    rdfs:label "Gentiles"@en .
+
+:Gethsemane a :LandArea ;
+    rdfs:label "Gethsemane"@en .
+
+:Gog a :GroupOfPeople ;
+    rdfs:label "Gog"@en ;
+    :description "an apocalyptic opponent of God's people"@en ;
+    :hasOnlyGenealogyMention false ;
+    rdfs:comment "The historic background of the reference to Gog is most likely the Lydian king in the 7th Century BC. Its usage in Revelation seems to describe a group of people,  but it is hard to be certain what is intended in this apocalyptic context."@en .
+
+:Golgotha a :LandArea ;
+    rdfs:label "Golgotha"@en .
+
+:Gomorrah a :City ;
+    rdfs:label "Gomorrah"@en ;
+    :location :GomorrahGeodata .
+
+:Greece a :StateOrProvince ;
+    rdfs:label "Greece"@en .
+
+:GreekLanguage a :NaturalLanguage ;
+    rdfs:label "Greek"@en .
+
+:Greeks a :EthnicGroup ;
+    rdfs:label "Greeks"@en .
+
+:Hades a :SupernaturalRegion ;
+    rdfs:label "Hades"@en ;
+    rdfs:comment "The state or place of the dead. SUO restricts use of GeographicArea to places on the earth."@en .
+
+:Haran a :City ;
+    rdfs:label "Haran"@en ;
+    :location :HaranGeodata ;
+    :subregionOf :Mesopotamia ;
+    rdfs:comment "In his speech before the Council, Stephen refers to Haran as a place where Abraham lived. "@en .
+
+:Hebrew a :NaturalLanguage ;
+    rdfs:label "Hebrew"@en .
+
+:Hebrews a :EthnicGroup ;
+    rdfs:label "Hebrews"@en .
+
+:Hellenists a :EthnicGroup ;
+    rdfs:label "Hellenists"@en .
+
+:Herodians a :PoliticalOrganization ;
+    rdfs:label "Herodians"@en .
+
+:Hierapolis a :City ;
+    rdfs:label "Hierapolis"@en .
+
+:Hosea a :Man ;
+    rdfs:label "Hosea"@en .
+
+:Iconium a :City ;
+    rdfs:label "Iconium"@en ;
+    :location :IconiumGeodata .
+
+:Idumea a :Region ;
+    rdfs:label "Idumea"@en .
+
+:Illyricum a :StateOrProvince ;
+    rdfs:label "Illyricum"@en .
+
+:Immanuel a :Man ;
+    rdfs:label "Immanuel"@en .
+
+:Isaiah a :Man ;
+    rdfs:label "Isaiah"@en .
+
+:Iscariot a :Man ;
+    rdfs:label "Iscariot"@en .
+
+:Israelites a :EthnicGroup ;
+    rdfs:label "Israelites"@en .
+
+:ItalianCohort a :PoliticalOrganization ;
+    rdfs:label "Italian Cohort"@en ;
+    rdfs:comment "A Roman legion"@en .
+
+:Italy a :GeopoliticalArea ;
+    rdfs:label "Italy"@en .
+
+:Jairus a :Man ;
+    rdfs:label "Jairus"@en .
+
+:Jambres a :Man ;
+    rdfs:label "Jambres"@en .
+
+:James a :Man ;
+    rdfs:label "James"@en .
+
+:Jannes a :Man ;
+    rdfs:label "Jannes"@en .
+
+:Jephthah a :Man ;
+    rdfs:label "Jephthah"@en .
+
+:Jeremiah a :Man ;
+    rdfs:label "Jeremiah"@en .
+
+:Jew a :ReligiousBelief ;
+    rdfs:label "Jew"@en .
+
+:Jews a :BeliefGroup ;
+    rdfs:label "Jews"@en .
+
+:Jezebel a :Woman ;
+    rdfs:label "Jezebel"@en ;
+    :description "the pagan wife of Ahab in the Old Testament"@en ;
+    :hasOnlyGenealogyMention false ;
+    rdfs:comment "This may be a figurative reference based on the pagan wife of Ahab in the Old Testament, rather than the actual name of a contemporary person."@en .
+
+:Job a :Man ;
+    rdfs:label "Job"@en .
+
+:Joel a :Man ;
+    rdfs:label "Joel"@en .
+
+:JonahTheProphet a :Man ;
+    rdfs:label "Jonah"@en ;
+    :description "A prophet from the Old Testmanent"^^xsd:string .
+
+:Jordan a :FreshWaterArea ;
+    rdfs:label "Jordan"@en .
+
+:JosephOfArimathea a :Man ;
+    rdfs:label "Joseph of Arimathea"@en ;
+    rdfs:comment "Joseph was a member of the Jewish ruling council, and a follower of Jesus. He put Jesus' body in his own tomb after the crucifixion. {en}"@en .
+
+:Joshua a :Man ;
+    rdfs:label "Joshua"@en .
+
+:Judas a :Man ;
+    rdfs:label "Judas"@en .
+
+:Jude a :Man ;
+    rdfs:label "Jude"@en .
+
+:Julius a :Man ;
+    rdfs:label "Julius"@en .
+
+:Kidron a :FreshWaterArea ;
+    rdfs:label "Kidron"@en ;
+    rdfs:comment "The Kidron Brook/Valley is just outside the walls of Jerusalem"@en .
+
+:Korah a :Man ;
+    rdfs:label "Korah"@en .
+
+:Laodiceans a :ResidenceGroup ;
+    rdfs:label "Laodiceans"@en .
+
+:Lasea a :City ;
+    rdfs:label "Lasea"@en ;
+    :location :LaseaGeodata .
+
+:Latin a :NaturalLanguage ;
+    rdfs:label "Latin"@en .
+
+:Levites a :ReligiousOrganization ;
+    rdfs:label "Levites"@en ;
+    rdfs:comment "Distinguished from Jews not by different beliefs, but by special roles related to observation of temple worship."@en .
+
+:Libya a :Region ;
+    rdfs:label "Libya"@en .
+
+:Lot a :Man ;
+    rdfs:label "Lot"@en .
+
+:Luke a :Man ;
+    rdfs:label "Luke"@en .
+
+:Lycaonia a :StateOrProvince ;
+    rdfs:label "Lycaonia"@en .
+
+:Lycaonian a :NaturalLanguage ;
+    rdfs:label "Lycaonian"@en .
+
+:Lycia a :StateOrProvince ;
+    rdfs:label "Lycia"@en .
+
+:Lysanias a :Man ;
+    rdfs:label "Lysanias"@en .
+
+:Lysias a :Man ;
+    rdfs:label "Lysias"@en .
+
+:Macedonians a :ResidenceGroup ;
+    rdfs:label "Macedonians"@en .
+
+:Magadan a :City ;
+    rdfs:label "Magadan"@en .
+
+:Magog a :GroupOfPeople ;
+    rdfs:label "Magog"@en ;
+    :description "an apocalyptic opponent of God's people"@en ;
+    :hasOnlyGenealogyMention false ;
+    rdfs:comment "Though in its original Old Testament context Magog  referred to a region, its New Testament usage seems to describe a group of people. "^^xsd:string .
+
+:Malchus a :Man ;
+    rdfs:label "Malchus"@en .
+
+:Malta a :Island ;
+    rdfs:label "Malta"@en ;
+    :location :MaltaGeodata .
+
+:Matthias a :Man ;
+    rdfs:label "Matthias"@en .
+
+:Medes a :EthnicGroup ;
+    rdfs:label "Medes"@en .
+
+:Melchizedek a :Man ;
+    rdfs:label "Melchizedek"@en .
+
+:Michael a :Angel ;
+    rdfs:label "Michael"@en .
+
+:Midian a :Man ;
+    rdfs:label "Midian"@en .
+
+:Miletus a :City ;
+    rdfs:label "Miletus"@en ;
+    :location :MiletusGeodata .
+
+:Mitylene a :City ;
+    rdfs:label "Mitylene"@en ;
+    :location :MityleneGeodata .
+
+:Mnason a :Man ;
+    rdfs:label "Mnason"@en .
+
+:Moloch a :SupernaturalBeing ;
+    rdfs:label "Moloch"@en .
+
+:Myra a :City ;
+    rdfs:label "Myra"@en ;
+    :location :MyraGeodata .
+
+:Mysia a :StateOrProvince ;
+    rdfs:label "Mysia"@en .
+
+:Nazarene a :ResidencyAttribute ;
+    rdfs:label "Nazarene"@en .
+
+:Nazarenes a :ResidenceGroup ;
+    rdfs:label "Nazarenes"@en .
+
+:Neapolis a :City ;
+    rdfs:label "Neapolis"@en ;
+    :location :NeapolisGeodata .
+
+:Nicanor a :Man ;
+    rdfs:label "Nicanor"@en .
+
+:Nicodemus a :Man ;
+    rdfs:label "Nicodemus"@en .
+
+:Nicolaitans a :BeliefGroup ;
+    rdfs:label "Nicolaitans"@en .
+
+:Nicolatianism a :ReligiousBeliefSystem ;
+    rdfs:label "Nicolatianism"@en ;
+    rdfs:comment "Not referenced as a belief system in the New Testament."@en .
+
+:Nicolaus a :Man ;
+    rdfs:label "Nicolaus"@en .
+
+:Nicopolis a :City ;
+    rdfs:label "Nicopolis"@en .
+
+:Niger a :Man ;
+    rdfs:label "Niger"@en .
+
+:Nineveh a :City ;
+    rdfs:label "Nineveh"@en ;
+    :location :NinevehGeodata .
+
+:Olivet a :Mountain ;
+    rdfs:label "Mount of Olives"@en,
+        "Olivet"@en ;
+    :location :MountofOlivesGeodata .
+
+:Omega a :Character ;
+    rdfs:label "Omega"@en .
+
+:Onesimus a :Man ;
+    rdfs:label "Onesimus"@en .
+
+:Onesiphorus a :Man ;
+    rdfs:label "Onesiphorus"@en .
+
+:Pamphylia a :StateOrProvince ;
+    rdfs:label "Pamphylia"@en .
+
+:Paphos a :City ;
+    rdfs:label "Paphos"@en ;
+    :location :PaphosGeodata .
+
+:Parmenas a :Man ;
+    rdfs:label "Parmenas"@en .
+
+:Parthia a :StateOrProvince ;
+    rdfs:comment "Part of the ancient empire of Persia, though under Roman domination in New Testmament times."^^xsd:string .
+
+:Parthians a :ResidenceGroup ;
+    rdfs:label "Parthians"@en .
+
+:PartyOfZealots a :PoliticalBeliefSystem ;
+    rdfs:label "Party of Zealots"@en .
+
+:Passover a :FixedHoliday ;
+    rdfs:label "Passover"@en .
+
+:Patara a :City ;
+    rdfs:label "Patara"@en ;
+    :location :PataraGeodata .
+
+:Patmos a :Island ;
+    rdfs:label "Patmos"@en .
+
+:Pentecost a :FixedHoliday ;
+    rdfs:label "Pentecost"@en .
+
+:Perga a :City ;
+    rdfs:label "Perga"@en ;
+    :location :PergaGeodata .
+
+:Pergamum a :City ;
+    rdfs:label "Pergamum"@en .
+
+:Pharaoh a :Man ;
+    rdfs:label "Pharaoh"@en ;
+    :occupation "king"@en ;
+    rdfs:comment "Pharaoh is actually a title rather than a personal name, but in the New Testament it refers to a single individual."@en .
+
+:Pharisee a :ReligiousBelief ;
+    rdfs:label "Pharisee"@en ;
+    rdfs:comment "Having a ReligiousBelief of Pharisee implies the belief of Jew as well. "^^xsd:string .
+
+:Philadelphia a :City ;
+    rdfs:label "Philadelphia"@en ;
+    :location :PhiladelphiaGeodata .
+
+:Philippians a :ResidenceGroup ;
+    rdfs:label "Philippians"@en .
+
+:Phoenix a :City ;
+    rdfs:label "Phoenix"@en ;
+    :location :PhoenixGeodata .
+
+:Phrygia a :Region ;
+    rdfs:label "Phrygia"@en .
+
+:Pilate a :Man ;
+    rdfs:label "Pilate"@en .
+
+:Pisidia a :StateOrProvince ;
+    rdfs:label "Pisidia"@en .
+
+:Porcius a :Man ;
+    rdfs:label "Porcius"@en .
+
+:Prochorus a :Man ;
+    rdfs:label "Prochorus"@en .
+
+:Ptolemais a :Man ;
+    rdfs:label "Ptolemais"@en .
+
+:Publius a :Man ;
+    rdfs:label "Publius"@en .
+
+:Puteoli a :City ;
+    rdfs:label "Puteoli"@en ;
+    :location :PuteoliGeodata .
+
+:Quirinius a :Man ;
+    rdfs:label "Quirinius"@en .
+
+:Rephan a :SupernaturalBeing ;
+    rdfs:label "Rephan"@en .
+
+:Rhegium a :City ;
+    rdfs:label "Rhegium"@en ;
+    :location :RhegiumGeodata .
+
+:Rhodes a :Island ;
+    rdfs:label "Rhodes"@en ;
+    :location :RhodesGeodata .
+
+:RomanCitizenship a :CitizenshipAttribute ;
+    rdfs:label "Roman"@en .
+
+:Romans a :EthnicGroup ;
+    rdfs:label "Romans"@en .
+
+:Sabbath a :FixedHoliday ;
+    rdfs:label "Sabbath"@en .
+
+:Sadduceanism a :ReligiousBeliefSystem ;
+    rdfs:label "Sadduceanism"@en ;
+    rdfs:comment "The beliefs of one of the main Jewish sects during the life of Jesus. In the New Testament the name of the sect is used, though not the belief system per se."@en .
+
+:Sadducees a :ReligiousOrganization ;
+    rdfs:label "Sadducees"@en .
+
+:Salamis a :City ;
+    rdfs:label "Salamis"@en ;
+    :location :SalamisGeodata .
+
+:Salem a :City ;
+    rdfs:label "Salem"@en ;
+    :location :SalemGeodata ;
+    rdfs:comment "Geodata assumes this is an earlier name for Jerusalem, though this is not certain. "^^xsd:string .
+
+:Salim a :City ;
+    rdfs:label "Salim"@en ;
+    :location :SalimGeodata .
+
+:Salmone a :LandArea ;
+    rdfs:label "Salmone"@en ;
+    :location :SalmoneGeodata .
+
+:Samaritans a :EthnicGroup ;
+    rdfs:label "Samaritans"@en .
+
+:Samos a :Island ;
+    rdfs:label "Samos"@en .
+
+:Samothrace a :Island ;
+    rdfs:label "Samothrace"@en .
+
+:Samson a :Man ;
+    rdfs:label "Samson"@en .
+
+:Samuel a :Man ;
+    rdfs:label "Samuel"@en .
+
+:Sardis a :City ;
+    rdfs:label "Sardis"@en ;
+    :location :SardisGeodata .
+
+:Satan a :EvilSupernaturalBeing ;
+    rdfs:label "Satan"@en .
+
+:Sceva a :Man ;
+    rdfs:label "Sceva"@en .
+
+:Scripture a :Series ;
+    rdfs:label "Scripture"@en .
+
+:Scriptures a :Series ;
+    rdfs:label "Scriptures"@en .
+
+:Scythian a :EthnicityAttribute ;
+    rdfs:label "Scythian"@en ;
+    rdfs:comment "Herodotus describes the Scythians as a savage race of nomads, living generally north of the Black and Caspain Seas. Paul's single use of the term seems largely synonymous with them as a type of barbarians. "@en .
+
+:Seleucia a :City ;
+    rdfs:label "Seleucia"@en ;
+    :location :SeleuciaGeodata .
+
+:Sidon a :City ;
+    rdfs:label "Sidon"@en ;
+    :location :SidonGeodata ;
+    :subregionOf :Phoenicia .
+
+:Silvanus a :Man ;
+    rdfs:label "Silvanus"@en .
+
+:SimeonTheProphet a :Man ;
+    rdfs:label "Simeon"@en ;
+    :description "A righteous man present in the temple when Jesus was presented as a baby"^^xsd:string .
+
+:Sinai a :Mountain ;
+    rdfs:label "Sinai"@en .
+
+:Smyrna a :City ;
+    rdfs:label "Smyrna"@en ;
+    :location :SmyrnaGeodata .
+
+:Sodom a :City ;
+    rdfs:label "Sodom"@en ;
+    :location :SodomGeodata .
+
+:Sosthenes a :Man ;
+    rdfs:label "Sosthenes"@en .
+
+:Spain a :LandArea ;
+    rdfs:label "Spain"@en .
+
+:Stephen a :Man ;
+    rdfs:label "Stephen"@en .
+
+:Stoic a :ReligiousBelief ;
+    rdfs:label "Stoic"@en .
+
+:Syracuse a :City ;
+    rdfs:label "Syracuse"@en ;
+    :location :SyracuseGeodata .
+
+:Syria a :StateOrProvince ;
+    rdfs:label "Syria"@en .
+
+:Syrophoenician a :EthnicityAttribute ;
+    rdfs:label "Syrophoenician"@en ;
+    rdfs:comment "Likely synonymous with Canaanite, and referring to those from the region of Syria and Phoenicia, and therefore a subgroup of Greek Gentiles."@en .
+
+:Syrtis a :SaltWaterArea ;
+    rdfs:label "Syrtis"@en .
+
+:Tarsus a :City ;
+    rdfs:label "Tarsus"@en ;
+    :location :TarsusGeodata .
+
+:Taverns a :LandArea ;
+    rdfs:label "Taverns"@en .
+
+:Theophilus a :Man ;
+    rdfs:label "Theophilus"@en .
+
+:Thessalonians a :ResidenceGroup ;
+    rdfs:label "Thessalonians"@en .
+
+:Theudas a :Man ;
+    rdfs:label "Theudas"@en .
+
+:Timon a :Man ;
+    rdfs:label "Timon"@en .
+
+:Titus a :Man ;
+    rdfs:label "Titus"@en .
+
+:Trachonitis a :Man ;
+    rdfs:label "Trachonitis"@en .
+
+:TribeOfGad a :Tribe ;
+    rdfs:label "tribe of Gad"@en .
+
+:TribeOfIssachar a :Tribe ;
+    rdfs:label "tribe of Issachar"@en .
+
+:TribeOfJoseph a :Tribe ;
+    rdfs:label "tribe of Joseph"@en .
+
+:TribeOfJudah a :Tribe ;
+    rdfs:label "tribe of Judah"@en .
+
+:TribeOfLevi a :Tribe ;
+    rdfs:label "tribe of Levi"@en .
+
+:TribeOfManasseh a :Tribe ;
+    rdfs:label "tribe of Manasseh"@en .
+
+:TribeOfNaphtali a :Tribe ;
+    rdfs:label "Naphtali"@en,
+        "tribe of Naphtali"@en .
+
+:TribeOfReuben a :Tribe ;
+    rdfs:label "tribe of Reuben"@en .
+
+:TribeOfSimeon a :Tribe ;
+    rdfs:label "tribe of Simeon"@en .
+
+:TribeOfZebulun a :Tribe ;
+    rdfs:label "Zebulun"@en,
+        "tribe of Zebulun"@en .
+
+:Tyrannus a :Man ;
+    rdfs:label "Tyrannus"@en .
+
+:Tyre a :City ;
+    rdfs:label "Tyre"@en ;
+    :location :TyreGeodata ;
+    :subregionOf :Phoenicia .
+
+:Zacchaeus a :Man ;
+    rdfs:label "Zacchaeus"@en .
+
+:Zarephath a :City ;
+    rdfs:label "Zarephath"@en ;
+    :subregionOf :Phoenicia ;
+    rdfs:comment "Jesus recounts the story of Elijah being sent to a widow of Zarephath as an example of God blessing those outside the nation of Israel."@en .
+
+:Zealot a :PoliticalAttribute ;
+    rdfs:label "Zealot"@en .
+
+:Zenas a :Man ;
+    rdfs:label "Zenas"@en .
+
+:Zeus a :SupernaturalBeing ;
+    rdfs:label "Zeus"@en .
+
+:Zion a :Mountain ;
+    rdfs:label "Zion"@en .
+
+:Abiathar a :Man ;
+    rdfs:label "Abiathar"@en ;
+    :description "High priest during the lifetime of King David"^^xsd:string ;
+    :ethnicity :Levite ;
+    :occupation "high priest"^^xsd:string .
+
+:AbijahthePriest a :Man ;
+    rdfs:label "Abijah"@en ;
+    :description "A priest appointed by King David"^^xsd:string ;
+    :ethnicity :Levite ;
+    :knows :David ;
+    :occupation "priest"^^xsd:string ;
+    rdfs:comment "Zacharias, father of John the Baptist, was a descendant of Abijah."@en .
+
+:Abilene a :StateOrProvince ;
+    rdfs:label "Abilene"@en ;
+    :subregion :Damascus .
+
+:Achaia a :StateOrProvince ;
+    rdfs:label "Achaia"@en ;
+    :residentPlaceOf :Gallio .
+
+:Aeneas a :Man ;
+    rdfs:label "Aeneas"@en ;
+    :description "A paralytic healed by Peter"^^xsd:string ;
+    :knows :SimonPeter .
+
+:AlexanderOfEphesus a :Man ;
+    rdfs:label "Alexander"@en ;
+    :description "A Jew in Ephesus who was put forward to quiet the crowd during the riot caused by Demetrius"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false .
+
+:Alexandria a :City ;
+    rdfs:label "Alexandria"@en ;
+    :location :AlexandriaGeodata ;
+    :nativePlaceOf :Apollos .
+
+:AlexandriaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Alexandria"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.118692e+01 ;
+    :longitude 3.009869e+01 .
+
+:AmphipolisGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Amphipolis"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.082087e+01 ;
+    :locationOf :Amphipolis ;
+    :longitude 2.383948e+01 .
+
+:AntiochGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Antioch"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.620712e+01 ;
+    :longitude 3.616197e+01 .
+
+:AntiochInPisidiaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Antioch"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.835065e+01 ;
+    :longitude 3.121603e+01 .
+
+:Antipatris a :City ;
+    rdfs:label "Antipatris"@en ;
+    :location :AntipatrisGeodata ;
+    :subregionOf :Judea .
+
+:AntipatrisGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Antipatris"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.210686e+01 ;
+    :longitude 3.495461e+01 .
+
+:Apollonia a :City ;
+    rdfs:label "Apollonia"@en ;
+    :location :ApolloniaGeodata ;
+    :subregionOf :Macedonia .
+
+:ApolloniaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Apollonia"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.058763e+01 ;
+    :longitude 2.335335e+01 .
+
+:Aretas a :Man ;
+    rdfs:label "Aretas"@en ;
+    :description "a king in Paul's time whose rule included Damascus"^^xsd:string ;
+    :occupation "king"^^xsd:string ;
+    :relativeOf :HerodAntipas .
+
+:Arimathea a :City ;
+    rdfs:label "Arimathea"@en ;
+    :location :ArimatheaGeodata ;
+    :subregionOf :Judea ;
+    rdfs:comment "Arimathea is known as the native place of Joseph, a member of the Sanhedrin and a disciple who put Jesus' body in his own tomb after the crucifixion."@en .
+
+:ArimatheaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Arimathea"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.197779e+01 ;
+    :longitude 3.494445e+01 .
+
+:Aristobulus a :Man ;
+    rdfs:label "Aristobulus"@en ;
+    :description "an inhabitant of Rome"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :residentPlace :Rome ;
+    rdfs:comment "Paul addresses \"the family/household of Aristobulus\", which may refer to slaves: so we have no evidence about the beliefs or other attributes of Aristobulus himself, other than his residence in Rome. One of the grandsons of Herod the Great had this name, though the name was common enough that this need not be the same man. "@en .
+
+:Artemas a :Man ;
+    rdfs:label "Artemas"@en ;
+    :collaboratesWith :Paul .
+
+:Asia a :GeopoliticalArea ;
+    rdfs:label "Asia"@en ;
+    :visitedPlaceOf :Epaenetus .
+
+:AssosGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Assos"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.948955e+01 ;
+    :longitude 2.633587e+01 .
+
+:Athens a :City ;
+    rdfs:label "Athens"@en ;
+    :residentPlaceOf :Damaris .
+
+:AttaliaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Attalia"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.691462e+01 ;
+    :longitude 3.071824e+01 .
+
+:Azotus a :City ;
+    rdfs:label "Azotus"@en ;
+    :subregionOf :Judea .
+
+:BabylonGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Babylon"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.253661e+01 ;
+    :longitude 4.442007e+01 .
+
+:Balaam a :Man ;
+    rdfs:label "Balaam"@en ;
+    :childOf :Beor ;
+    :description "an Old Testament figure and negative example"^^xsd:string .
+
+:Balak a :Man ;
+    rdfs:label "Balak"@en ;
+    :description "king of Moab who hired Balaam"^^xsd:string ;
+    :ethnicity :Moabite ;
+    :occupation "king"^^xsd:string .
+
+:Bartimaeus a :Man ;
+    rdfs:label "Bartimaeus"@en ;
+    :childOf :Timaeus ;
+    :description "a blind beggar whom Jesus healed"^^xsd:string .
+
+:Beor a :Man ;
+    rdfs:label "Beor"@en ;
+    :parentOf :Balaam .
+
+:Berea a :City ;
+    rdfs:label "Berea"@en ;
+    :location :BereaGeodata ;
+    :subregionOf :Macedonia .
+
+:BereaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Berea"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.043708e+01 ;
+    :longitude 2.225123e+01 .
+
+:BethanyBeyondtheJordanGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Bethany Beyond the Jordan"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.183674e+01 ;
+    :longitude 3.555009e+01 .
+
+:Bethesda a :FreshWaterArea ;
+    rdfs:label "Bethesda"@en ;
+    :subregionOf :Jerusalem .
+
+:BethlehemGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Bethlehem"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.171507e+01 ;
+    :longitude 3.520536e+01 .
+
+:Bethphage a :City ;
+    rdfs:label "Bethphage"@en ;
+    :subregionOf :Judea .
+
+:Bethsaida a :City ;
+    rdfs:label "Bethsaida"@en ;
+    :location :BethsaidaGeodata ;
+    :subregionOf :Galilee ;
+    rdfs:comment """NNE of Sea of Galilee, "Bethsaida Julia". ISBE has a thorough account
+of whether, given Mark 6.45 and John's "Bethsaida of Galilee", 
+there were two such towns (with a second, smaller one on the west side),
+or only one"""@en .
+
+:BethsaidaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Bethsaida"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.287856e+01 ;
+    :longitude 3.561284e+01 .
+
+:CaesarAugustus a :Man ;
+    rdfs:label "Caesar"@en ;
+    :description "Roman Emperor at the time of Jesus' birth"^^xsd:string ;
+    :ethnicity :Roman ;
+    :occupation "emperor"^^xsd:string ;
+    rdfs:comment "Caesar is used as a name for several different individuals in the New Testament"^^xsd:string .
+
+:CaesarNero a :Man ;
+    rdfs:label "Caesar"@en ;
+    :description "Roman Emperor during Paul's ministry"^^xsd:string ;
+    :ethnicity :Roman ;
+    :occupation "emperor"^^xsd:string ;
+    rdfs:comment "Caesar is used as a name for several different individuals in the New Testament"^^xsd:string .
+
+:CaesareaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Caesarea"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.248366e+01 ;
+    :longitude 3.493994e+01 .
+
+:CaesareaPhilippi a :City ;
+    rdfs:label "Caesarea Philippi"@en ;
+    :location :CaesareaPhilippiGeodata ;
+    :subregionOf :Ituraea .
+
+:CaesareaPhilippiGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Caesarea Philippi"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.325101e+01 ;
+    :longitude 3.569398e+01 .
+
+:CanaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Cana"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.27521e+01 ;
+    :longitude 3.53418e+01 .
+
+:Candace a :Woman ;
+    rdfs:label "Candace"@en ;
+    :ethnicity :Ethiopian ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "queen"@en ;
+    rdfs:comment "Candace is actually a title like \"Pharaoh\" rather than a personal name, hence her occupation as queen."@en .
+
+:Capernaum a :City ;
+    rdfs:label "Capernaum"@en ;
+    :location :CapernaumGeodata ;
+    :subregionOf :Galilee .
+
+:CapernaumGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Capernaum"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.288082e+01 ;
+    :longitude 3.557534e+01 .
+
+:Carpus a :Man ;
+    rdfs:label "Carpus"@en ;
+    :collaboratesWith :Paul ;
+    :description "an associate of Paul's, whom the Apostle entrusted with books, parchments, and his cloak"^^xsd:string .
+
+:Cenchreae a :City ;
+    rdfs:label "Cenchreae"@en ;
+    :location :CenchreaeGeodata ;
+    :residentPlaceOf :Phoebe .
+
+:CenchreaeGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Cenchreae"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.790791e+01 ;
+    :longitude 2.296102e+01 .
+
+:Chorazin a :City ;
+    rdfs:label "Chorazin"@en ;
+    :subregionOf :Galilee .
+
+:Chuza a :Man ;
+    rdfs:label "Chuza"@en ;
+    :description "Household manager of Herod Antipas"^^xsd:string ;
+    :knows :HerodAntipas ;
+    :occupation "household manager"^^xsd:string ;
+    :spouseOf :Joanna ;
+    rdfs:comment "Though Chuza's wife was a devoted follower of Jesus, there's no evidence as to Chuza's belief."@en .
+
+:Claudia a :Woman ;
+    rdfs:label "Claudia"@en ;
+    :description "a Christian who sent greeetings to Timothy in Paul's second epislte."@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Eubulus,
+        :Linus,
+        :Paul,
+        :Pudens,
+        :Timothy ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "Rome as ResidentPlace because Paul was imprisoned there when writing to Timothy."^^xsd:string .
+
+:ClaudiusLysias a :Man ;
+    rdfs:label "Claudius Lysias"@en ;
+    :description "the military tribune commanding the Roman forces in Jerusalem"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Felix,
+        :Paul ;
+    :occupation "tribune"@en ;
+    :residentPlace :Jerusalem ;
+    rdfs:comment "Greek ethnicity is suggested by his surname. "@en .
+
+:CnidusGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Cnidus"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.6685e+01 ;
+    :longitude 2.737336e+01 .
+
+:ColossaeGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Colossae"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.782981e+01 ;
+    :longitude 2.919879e+01 .
+
+:CorinthGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Corinth"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.789771e+01 ;
+    :longitude 2.288905e+01 .
+
+:Cornelius a :Man ;
+    rdfs:label "Cornelius"@en ;
+    :ethnicity :Roman ;
+    :knows :SimonPeter ;
+    :occupation "centurion"^^xsd:string .
+
+:CosGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Cos"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.679289e+01 ;
+    :longitude 2.708847e+01 .
+
+:Crescens a :Man ;
+    rdfs:label "Crescens"@en ;
+    :collaboratesWith :Paul ;
+    :description "a companion of the Apostle Paul"^^xsd:string ;
+    rdfs:comment "Crescens may have been from Rome originally"@en .
+
+:DalmanuthaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Dalmanutha"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.284831e+01 ;
+    :longitude 3.55235e+01 .
+
+:Damaris a :Woman ;
+    rdfs:label "Damaris"@en ;
+    :description "a convert from Paul's address to the Aeropagus"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Athens ;
+    rdfs:comment "Damaris was converted through Paul's preaching in Athens."@en .
+
+:Damascus a :City ;
+    rdfs:label "Damascus"@en ;
+    :subregionOf :Abilene .
+
+:Decapolis a :StateOrProvince ;
+    rdfs:label "Decapolis"@en ;
+    :subregion :Gadara .
+
+:Demas a :Man ;
+    rdfs:label "Demas"@en ;
+    :collaboratesWith :Paul ;
+    rdfs:comment "Though Paul describes Demas as \"my fellow worker\" in Philemon, later he apparently deserted him and went to Thessalonica. He was with Paul when he wrote his letter to  Philemon and the Colossians, but Paul's location when writing them is uncertain. "@en .
+
+:Derbe a :City ;
+    rdfs:label "Derbe"@en ;
+    :location :DerbeGeodata ;
+    :nativePlaceOf :GaiusOfDerbe .
+
+:DerbeGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Derbe"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.737704e+01 ;
+    :longitude 3.322035e+01 .
+
+:Egypt a :Nation ;
+    rdfs:label "Egypt"@en ;
+    :residentPlaceOf :Mary .
+
+:Emmaus a :City ;
+    rdfs:label "Emmaus"@en ;
+    :location :EmmausGeodata ;
+    :subregionOf :Judea ;
+    rdfs:comment "Emmaus is a village about seven miles from Jerusalem. Jesus joined two disciples who were walking here, though they did not recognize Him until the end of the journey. "@en .
+
+:EmmausGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Emmaus"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.18379e+01 ;
+    :longitude 3.49955e+01 .
+
+:EphesusGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Ephesus"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.795452e+01 ;
+    :longitude 2.736812e+01 .
+
+:Ephraim a :City ;
+    rdfs:label "Ephraim"@en ;
+    :location :EphraimGeodata ;
+    :subregionOf :Judea ;
+    rdfs:comment "Jesus retreated to this town with his disciples when the Jews plotted to kill him after Lazarus was raised from the dead."@en .
+
+:EphraimGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Ephraim"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.194718e+01 ;
+    :longitude 3.530401e+01 .
+
+:Eutychus a :Man ;
+    rdfs:label "Eutychus"@en ;
+    :description "a young man who fell asleep during a lengthy sermon by Paul"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul ;
+    :residentPlace :Troas .
+
+:FairHavensGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Fair Havens"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.493066e+01 ;
+    :longitude 2.473534e+01 .
+
+:Gadara a :City ;
+    rdfs:label "Gadara"@en ;
+    :subregionOf :Decapolis ;
+    rdfs:comment """City southeast of the Sea of Galilee. Not mentioned in Scripture as such, but "the country of the Gadarenes" (Matt 8.28) takes its name from this city. 
+Part of the Decapolis."""^^xsd:string .
+
+:Gaza a :City ;
+    rdfs:label "Gaza"@en ;
+    :location :GazaGeodata ;
+    :subregionOf :Judea .
+
+:GazaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Gaza"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.152901e+01 ;
+    :longitude 3.443673e+01 .
+
+:Gennesaret a :LandArea ;
+    rdfs:label "Gennesaret"@en ;
+    :subregionOf :Galilee ;
+    rdfs:comment "An area on the west side of the Sea of Galilee, where Jesus healed the sick"@en .
+
+:Gentile a :EthnicityAttribute ;
+    rdfs:label "Gentile"@en ;
+    rdfs:comment "Essentially a \"non-ethnicity\" meaning not Jewish."@en ;
+    owl:differentFrom :Jewish .
+
+:Gideon a :Man ;
+    rdfs:label "Gideon"@en ;
+    :description "a  judge of Israel prior to the monarchy"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Judaism .
+
+:GomorrahGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Gomorrah"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.122574e+01 ;
+    :longitude 3.546679e+01 .
+
+:HaranGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Haran"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.692937e+01 ;
+    :longitude 3.904729e+01 .
+
+:IconiumGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Iconium"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.788182e+01 ;
+    :longitude 3.248788e+01 .
+
+:Issachar a :Man ;
+    rdfs:label "Issachar"@en ;
+    :siblingOf :Gad .
+
+:Ituraea a :StateOrProvince ;
+    rdfs:label "Ituraea"@en ;
+    :subregion :CaesareaPhilippi ;
+    rdfs:comment "An area to the NW of the Sea of Galilee. It's unclear whether this refers to a definite region or an undefined general area occupied by the Ituraeans, a migratory tribe."@en .
+
+:Jericho a :City ;
+    rdfs:label "Jericho"@en ;
+    :location :JerichoGeodata ;
+    :subregionOf :Judea .
+
+:JerichoGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Jericho"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.187122e+01 ;
+    :longitude 3.545194e+01 .
+
+:JerusalemGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Jerusalem"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.177451e+01 ;
+    :longitude 3.522396e+01 .
+
+:JoppaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Joppa"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.205529e+01 ;
+    :longitude 3.47494e+01 .
+
+:Joses a :Man ;
+    rdfs:label "Joses"@en ;
+    :siblingOf :JamesSonOfAlphaeus .
+
+:Kish a :Man ;
+    rdfs:label "Kish"@en ;
+    :parentOf :SaulSonOfKish .
+
+:Laodicea a :City ;
+    rdfs:label "Laodicea"@en ;
+    :location :LaodiceaGeodata ;
+    :residentPlaceOf :Nympha .
+
+:LaodiceaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Laodicea"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.777465e+01 ;
+    :longitude 2.909677e+01 .
+
+:LaseaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Lasea"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.493103e+01 ;
+    :longitude 2.480566e+01 .
+
+:Linus a :Man ;
+    rdfs:label "Linus"@en .
+
+:Lydda a :City ;
+    rdfs:label "Lydda"@en ;
+    :location :LyddaGeodata ;
+    :subregionOf :Judea .
+
+:LyddaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Lydda"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.198584e+01 ;
+    :longitude 3.489443e+01 .
+
+:Lystra a :City ;
+    rdfs:label "Lystra"@en ;
+    :location :LystraGeodata ;
+    :residentPlaceOf :Eunice .
+
+:LystraGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Lystra"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.760128e+01 ;
+    :longitude 3.244678e+01 .
+
+:MaltaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Malta"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.585283e+01 ;
+    :longitude 1.453244e+01 .
+
+:Mesopotamia a :Region ;
+    rdfs:label "Mesopotamia"@en .
+
+:MiletusGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Miletus"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.759281e+01 ;
+    :longitude 2.730704e+01 .
+
+:MityleneGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Mitylene"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.909884e+01 ;
+    :longitude 2.655789e+01 .
+
+:Moses a :Man ;
+    rdfs:label "Moses"@en ;
+    :siblingOf :Aaron .
+
+:MountofOlivesGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Mount of Olives"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.177646e+01 ;
+    :longitude 3.524257e+01 .
+
+:MyraGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Myra"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.626321e+01 ;
+    :longitude 3.006643e+01 .
+
+:Naaman a :Man ;
+    rdfs:label "Naaman"@en ;
+    :ethnicity :Syrian .
+
+:Nain a :City ;
+    rdfs:label "Nain"@en ;
+    :location :NainGeodata ;
+    :subregionOf :Galilee .
+
+:NainGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Nain"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.262729e+01 ;
+    :longitude 3.535012e+01 .
+
+:Naphtali a :Man ;
+    rdfs:label "Naphtali"@en ;
+    :siblingOf :Gad .
+
+:Narcissus a :Man ;
+    rdfs:label "Narcissus"@en ;
+    :hasOnlyGenealogyMention false ;
+    :residentPlace :Rome ;
+    rdfs:comment "Paul addresses \"the family/household of Narcissus\", which may refer to slaves: so we have no evidence about the beliefs or other attributes of Narcissus himself, other than his residence in Rome. "^^xsd:string .
+
+:NazarethGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Nazareth"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.270688e+01 ;
+    :longitude 3.530169e+01 .
+
+:NeapolisGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Neapolis"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.094506e+01 ;
+    :longitude 2.443248e+01 .
+
+:NinevehGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Nineveh"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.637255e+01 ;
+    :longitude 4.31329e+01 .
+
+:PaphosGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Paphos"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.477011e+01 ;
+    :longitude 3.242823e+01 .
+
+:PataraGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Patara"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.627517e+01 ;
+    :longitude 2.93185e+01 .
+
+:PergaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Perga"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.699888e+01 ;
+    :longitude 3.091083e+01 .
+
+:Phanuel a :Man ;
+    rdfs:label "Phanuel"@en ;
+    :parentOf :Anna .
+
+:Phariseeism a :ReligiousBeliefSystem ;
+    rdfs:label "Phariseeism"@en ;
+    rdfs:comment "The beliefs of one of the main Jewish sects during the life of Jesus. In the New Testament the name of the sect is used, though not the belief system per se."@en .
+
+:Pharisees a :ReligiousOrganization ;
+    rdfs:label "Pharisees"@en ;
+    :member :Gamaliel .
+
+:PhiladelphiaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Philadelphia"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.835786e+01 ;
+    :longitude 2.852644e+01 .
+
+:Philetus a :Man ;
+    rdfs:label "Philetus"@en ;
+    :collaboratesWith :Hymenaeus .
+
+:PhilippiGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Philippi"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.101329e+01 ;
+    :longitude 2.428829e+01 .
+
+:PhoenixGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Phoenix"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.526651e+01 ;
+    :longitude 2.401414e+01 .
+
+:Pontus a :Region ;
+    rdfs:label "Pontus"@en .
+
+:Pudens a :Man ;
+    rdfs:label "Pudens"@en .
+
+:PuteoliGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Puteoli"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.083851e+01 ;
+    :longitude 1.424733e+01 .
+
+:Pyrrhus a :Man ;
+    rdfs:label "Pyrrhus"@en ;
+    :parentOf :Sopater .
+
+:Quartus a :Man ;
+    rdfs:label "Quartus"@en .
+
+:Ramah a :City ;
+    rdfs:label "Ramah"@en ;
+    :location :RamahGeodata ;
+    :subregionOf :Judea ;
+    rdfs:comment "The only NT reference is a quotation from Jer 31:15: this presumably refers to Ramah near Bethel. "^^xsd:string .
+
+:RamahGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Ramah"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.190463e+01 ;
+    :longitude 3.523965e+01 .
+
+:Reuben a :Man ;
+    rdfs:label "Reuben"@en ;
+    :siblingOf :Gad .
+
+:RhegiumGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Rhegium"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.811333e+01 ;
+    :longitude 1.564607e+01 .
+
+:RhodesGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Rhodes"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.643928e+01 ;
+    :longitude 2.822853e+01 .
+
+:SalamisGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Salamis"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.514775e+01 ;
+    :longitude 3.385187e+01 .
+
+:SalemGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Salem"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.177451e+01 ;
+    :longitude 3.522396e+01 .
+
+:SalimGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Salim"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.239607e+01 ;
+    :longitude 3.553871e+01 .
+
+:SalmoneGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Salmone"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.520498e+01 ;
+    :longitude 2.598385e+01 .
+
+:SamariaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Samaria"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.227767e+01 ;
+    :longitude 3.519862e+01 ;
+    rdfs:comment "This may be overly precise positioning for a region"@en .
+
+:SamariaTheCity a :City ;
+    rdfs:label "Samaria"@en ;
+    :subregionOf :Samaria ;
+    rdfs:comment "Samaria was both a province in Palestine and a city of the same name."@en .
+
+:SardisGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Sardis"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.84841e+01 ;
+    :longitude 2.81157e+01 .
+
+:SeaOfGalilee a :FreshWaterArea ;
+    rdfs:label "Sea of Galilee"@en ;
+    :location :SeaofGalileeGeodata ;
+    :subregionOf :Galilee .
+
+:SeaofGalileeGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Sea of Galilee"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.27759e+01 ;
+    :longitude 3.559042e+01 .
+
+:SeleuciaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Seleucia"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.612958e+01 ;
+    :longitude 3.59398e+01 .
+
+:SergiusPaulus a :Man ;
+    rdfs:label "Sergius Paulus"@en ;
+    :description "procounsul of Cyprus and 'a man of intelligence'"^^xsd:string ;
+    :knows :Bar-Jesus,
+        :Paul,
+        :Silas ;
+    :occupation "procounsul"^^xsd:string .
+
+:Sharon a :LandArea ;
+    rdfs:label "Sharon"@en ;
+    :subregionOf :Judea .
+
+:Shechem a :City ;
+    rdfs:label "Shechem"@en ;
+    :location :ShechemGeodata ;
+    :nativePlaceOf :Hamor ;
+    rdfs:comment "A subregion of Canaan."^^xsd:string .
+
+:ShechemGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Shechem"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.221495e+01 ;
+    :longitude 3.527651e+01 .
+
+:SidonGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Sidon"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.355717e+01 ;
+    :longitude 3.535566e+01 .
+
+:Siloam a :FreshWaterArea ;
+    rdfs:label "Siloam"@en ;
+    :subregionOf :Jerusalem ;
+    rdfs:comment "A pool outside the walls of Jerusalem."@en .
+
+:SmyrnaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Smyrna"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.832512e+01 ;
+    :longitude 2.725625e+01 .
+
+:SodomGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Sodom"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.142838e+01 ;
+    :longitude 3.537153e+01 .
+
+:Sychar a :City ;
+    rdfs:label "Sychar"@en ;
+    :location :SycharGeodata ;
+    :subregionOf :Samaria ;
+    rdfs:comment "Jesus spoke here with a Samaritan woman about living water"@en .
+
+:SycharGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Sychar"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.22057e+01 ;
+    :longitude 3.530486e+01 .
+
+:SyracuseGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Syracuse"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.707082e+01 ;
+    :longitude 1.529666e+01 .
+
+:Syrian a :EthnicityAttribute ;
+    rdfs:label "Syrian"@en ;
+    :ethnicityOf :Naaman ;
+    rdfs:comment "Of the country of Syria."@en .
+
+:TarsusGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Tarsus"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.69139e+01 ;
+    :longitude 3.48834e+01 .
+
+:Thaddaeus a :Man ;
+    rdfs:label "Thaddaeus"@en ;
+    :collaboratesWith :Andrew .
+
+:ThessalonicaGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Thessalonica"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 4.064161e+01 ;
+    :longitude 2.293595e+01 .
+
+:Thyatira a :City ;
+    rdfs:label "Thyatira"@en ;
+    :location :ThyatiraGeodata ;
+    :nativePlaceOf :Lydia .
+
+:ThyatiraGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Thyatira"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.892575e+01 ;
+    :longitude 2.785737e+01 .
+
+:Tiberias a :City ;
+    rdfs:label "Tiberias"@en ;
+    :location :TiberiasGeodata ;
+    :subregionOf :Galilee ;
+    rdfs:comment "Tiberias was built by Herod Antipas, the tetrarch of Galilee, as his capital. "@en .
+
+:TiberiasGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Tiberias"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.279688e+01 ;
+    :longitude 3.552733e+01 .
+
+:TiberiusCaesar a :Man ;
+    rdfs:label "Tiberius Caesar"@en ;
+    :description "Roman Emperor at the time of Jesus' ministry"^^xsd:string ;
+    :ethnicity :Roman ;
+    :occupation "emperor"^^xsd:string ;
+    rdfs:comment "Caesar is used as a name for several different individuals in the New Testament. This is the Caesar referred to by Jesus. "@en .
+
+:Timaeus a :Man ;
+    rdfs:label "Timaeus"@en ;
+    :parentOf :Bartimaeus .
+
+:Titius a :Man ;
+    rdfs:label "Titius"@en ;
+    :ethnicity :Greek .
+
+:TribeOfAsher a :Tribe ;
+    rdfs:label "tribe of Asher"@en ;
+    :member :Anna .
+
+:TribeOfBenjamin a :Tribe ;
+    rdfs:label "tribe of Benjamin"@en ;
+    :member :SaulSonOfKish .
+
+:TroasGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Troas"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.950182e+01 ;
+    :longitude 2.608149e+01 .
+
+:TyreGeodata a :GeographicLocation ;
+    rdfs:label "geodata for Tyre"@en ;
+    :altitude "0"^^xsd:int ;
+    :latitude 3.327292e+01 ;
+    :longitude 3.519878e+01 .
+
+:Zebulun a :Man ;
+    rdfs:label "Zebulun"@en ;
+    :siblingOf :Gad .
+
+:Aaron a :Man ;
+    rdfs:label "Aaron"@en ;
+    :description "Moses' assistant during the Exodus"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :siblingOf :Moses .
+
+:Agabus a :Man ;
+    rdfs:label "Agabus"@en ;
+    :collaboratesWith :Barabbas,
+        :Paul ;
+    :description "A prophet in the Jerusalem church who visited Antioch and foretold of a coming famine."^^xsd:string ;
+    :occupation "prophet"^^xsd:string .
+
+:Alexander a :Man ;
+    rdfs:label "Alexander"@en ;
+    :childOf :SimonOfCyrene ;
+    :description "Probably an early Christian known to Mark, who mentions him as the son of Simon of Cyrene, who was compelled to carry Jesus' cross"@en ;
+    :hasOnlyGenealogyMention false ;
+    :siblingOf :Rufus .
+
+:AlexanderTheCoppersmith a :Man ;
+    rdfs:label "Alexander"@en ;
+    :description "A resident of Ephesus who caused Paul \"great harm\""^^xsd:string ;
+    :enemyOf :Paul ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "coppersmith"@en ;
+    :possiblySamePersonAs :AlexanderTheHeretic ;
+    rdfs:comment "This may be the same as AlexanderTheHeretic, since they are both identified as opponents of Paul and the Gospel, and they both resided in Ephesus."@en .
+
+:AlexanderTheHeretic a :Man ;
+    rdfs:label "Alexander"@en ;
+    :collaboratesWith :Hymenaeus ;
+    :description "Described to Timothy by Paul as having \"rejected conscience\""^^xsd:string ;
+    :possiblySamePersonAs :AlexanderTheCoppersmith .
+
+:AlphaeusFatherOfLevi a :Man ;
+    rdfs:label "Alphaeus"@en ;
+    :description "The father of Levi, one of the Twelve"^^xsd:string ;
+    :ethnicity :Galilean ;
+    :parentOf :Levi ;
+    rdfs:comment "That both James the Less and Levi had fathers named Alphaeus has led some to speculate they were brothers, but this seems unlikely."@en .
+
+:Amphipolis a :City ;
+    rdfs:label "Amphipolis"@en ;
+    :location :AmphipolisGeodata ;
+    :subregionOf :Macedonia .
+
+:AnaniasOfDamascus a :Man ;
+    rdfs:label "Ananias"@en ;
+    :collaboratesWith :Paul ;
+    :description "Ananias was sent to Paul to restore his sight, after his encounter with Christ on the road to Damascus"^^xsd:string ;
+    :ethnicity :Jewish .
+
+:Apphia a :Woman ;
+    rdfs:label "Apphia"@en ;
+    :collaboratesWith :Archippus ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :spouseOf :Philemon ;
+    rdfs:comment """Being the spouseOf Philemon is implied by their mention together in the salutation of the Letter to Philemon, though it is not definite. 
+Paul describes her as "our sister", presumably in Christ rather than literally. See Philemon about ResidentPlace."""@en .
+
+:Archippus a :Man ;
+    rdfs:label "Archippus"@en ;
+    :collaboratesWith :Apphia,
+        :Philemon ;
+    :description "a Christian in Colossae whom Paul describes as \"our fellow soldier\""^^xsd:string ;
+    rdfs:comment "Paul describes Archippus as \"our fellow soldier\" in Philemon 1:2, perhaps based on service together in Ephesus (RWP)."@en .
+
+:Arphaxad a :Man ;
+    rdfs:label "Arphaxad"@en ;
+    :childOf :Shem ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :CainanSonOfArphaxad .
+
+:Barabbas a :Man ;
+    rdfs:label "Barabbas"@en ;
+    :collaboratesWith :Agabus ;
+    :description "a criminal, released in place of Jesus"^^xsd:string ;
+    :ethnicity :Jewish .
+
+:Barachiah a :Man ;
+    rdfs:label "Barachiah"@en ;
+    :ethnicity :Jewish ;
+    :parentOf :ZechariahSonOfBarachiah .
+
+:Bartholomew a :Man ;
+    rdfs:label "Bartholomew"@en ;
+    :collaboratesWith :Andrew ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :ethnicity :Galilean ;
+    :occupation "apostle"^^xsd:string ;
+    rdfs:comment "Many believe Bartholemew is another name for Nathanael, though their identity is deduced rather than stated."@en .
+
+:Bethlehem a :City ;
+    rdfs:label "Bethlehem"@en ;
+    :location :BethlehemGeodata ;
+    :subregionOf :Judea ;
+    :visitedPlaceOf :Mary .
+
+:CainanSonOfArphaxad a :Man ;
+    rdfs:label "Cainan"@en ;
+    :childOf :Arphaxad ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Shelah .
+
+:CainanSonOfEnosh a :Man ;
+    rdfs:label "Cainan"@en ;
+    :childOf :Enos ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Mahalaleel ;
+    rdfs:comment "Kenan in the NIV"@en .
+
+:Cana a :City ;
+    rdfs:label "Cana"@en ;
+    :location :CanaGeodata ;
+    :subregionOf :Galilee ;
+    :visitedPlaceOf :Mary .
+
+:Canaanite a :EthnicityAttribute ;
+    rdfs:label "Canaanite"@en ;
+    :ethnicityOf :Hamor ;
+    rdfs:comment "In the Old Testament, a people living west of the Jordan river who were partially displaced by the Israelites. In New Testament times, Canaanites lived primarily in the area of Phoenicia. Cananean, in contrast, is almost certainly political, rather than ethnic. "@en ;
+    owl:differentFrom :Jewish .
+
+:Cleopas a :Man ;
+    rdfs:label "Cleopas"@en ;
+    :collaboratesWith :Jesus ;
+    :description "one of the two travellers on the road to Emmaus to whom Jesus appeared after his resurrection"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Jerusalem ;
+    rdfs:comment "\"The name is a contraction of Cleopatros, not identical with Clopas of Joh 19:25.\" (ISBE) Jerusalem could have been his place of residence. "@en ;
+    owl:versionInfo "TODO: Cleopas knew the 11, and the women who went to the tomb"^^xsd:string .
+
+:DemetriusTheSilversmith a :Man ;
+    rdfs:label "Demetrius"@en ;
+    :description "a craftsman in Ephesus who made silver shrines of Artemis"@en ;
+    :enemyOf :Paul ;
+    :occupation "silversmith"@en ;
+    :possiblySamePersonAs :Demetrius ;
+    rdfs:comment "Demetrius was a common name, so it's unlikely this man is the same as the disciple mentioned in 3John.1.12."@en .
+
+:Diotrephes a :Man ;
+    rdfs:label "Diotrephes"@en ;
+    :antagonistOf :JohnSonOfZebedee ;
+    :description "a member of the church to which 3 John was addressed"@en .
+
+:Egyptian a :EthnicityAttribute ;
+    rdfs:label "Egyptian"@en ;
+    :ethnicityOf :Hagar ;
+    rdfs:comment "Only used in the New Testament to refer to those whose place of birth is Egypt. "@en ;
+    owl:differentFrom :Jewish .
+
+:Elijah a :Man ;
+    rdfs:label "Elijah"@en ;
+    :description "one of the most notable prophets in the Old Testament"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :knows :Elisha ;
+    rdfs:comment "John the Baptist represented Elijah returned to his contemporaries, and the name is sometimes therefore used to refer to John (e.g. Matt.17.12)."@en .
+
+:Elisha a :Man ;
+    rdfs:label "Elisha"@en ;
+    :description "an Old Testament prophet"@en ;
+    :ethnicity :Jewish ;
+    :knows :Elijah .
+
+:Enoch a :Man ;
+    rdfs:label "Enoch"@en ;
+    :childOf :Jared ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"@en ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Methuselah ;
+    rdfs:comment "Different from the eldest son of Cain (Gen.4:17)"@en .
+
+:Enos a :Man ;
+    rdfs:label "Enos"@en ;
+    :childOf :Seth ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"@en ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :CainanSonOfEnosh ;
+    rdfs:comment "Enosh in the NIV"@en .
+
+:Epaphras a :Man ;
+    rdfs:label "Epaphras"@en ;
+    :collaboratesWith :Paul ;
+    :description "A fellow minister with Paul, and likely founder of the Colossian church"@en ;
+    :occupation "missionary"@en ;
+    rdfs:comment "Paul mentions that Epaphras \"worked hard\" for those in Laodicea and Hierapolis, so it's possible (but not certain) he visited there as well. "@en ;
+    owl:differentFrom :Epaphroditus .
+
+:Epaphroditus a :Man ;
+    rdfs:label "Epaphroditus"@en ;
+    :collaboratesWith :Paul ;
+    :description "A Christian sent by the Philippian church with a gift for Paul"@en ;
+    rdfs:comment """Though Epaphras is a contraction of Epaphroditus, this individual is distinct from the Epaphras mentioned in Colossians and Philemon.
+Rome as a visitedPlace assumes Paul was there while writing Philippians. """@en ;
+    owl:differentFrom :Epaphras .
+
+:ErastusTheTreasurer a :Man ;
+    rdfs:label "Erastus the city treasurer"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul ;
+    :occupation "treasurer"@en ;
+    :possiblySamePersonAs :Erastus ;
+    rdfs:comment "It is uncertain whether this Erastus is the same as Paul's travelling companion and fellow minister, though possible. "^^xsd:string .
+
+:Ethiopian a :EthnicityAttribute ;
+    rdfs:label "Ethiopian"@en ;
+    :ethnicityOf :Candace ;
+    rdfs:comment "Of the country of Ethiopia. "@en ;
+    owl:differentFrom :Jewish .
+
+:GaiusTheBeloved a :Man ;
+    rdfs:label "Gaius"@en ;
+    :collaboratesWith :JohnSonOfZebedee ;
+    :description "\"the beloved\" to whom John addresses his third epistle"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Demetrius,
+        :Diotrephes ;
+    :religiousBelief :Christianity .
+
+:Gallio a :Man ;
+    rdfs:label "Gallio"@en ;
+    :ethnicity :Roman ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "proconsul of Achaia"^^xsd:string ;
+    :residentPlace :Achaia ;
+    rdfs:comment "He is not considered an antagonist of Paul because his only involvement was indifference. "^^xsd:string .
+
+:Greek a :EthnicityAttribute ;
+    rdfs:label "Greek"@en ;
+    :ethnicityOf :Timothy,
+        :Titius ;
+    rdfs:comment "Sometimes used synomymously with Gentile, but certainly means non-Jewish in ethnicity."@en .
+
+:Hamor a :Man ;
+    rdfs:label "Hamor"@en ;
+    :description ""^^xsd:string ;
+    :ethnicity :Canaanite ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Shechem ;
+    :occupation "ruler"@en .
+
+:Hermogenes a :Man ;
+    rdfs:label "Hermogenes"@en ;
+    :description "a Christian who refused to help Paul during his Roman imprisonment"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Phygelus ;
+    :religiousBelief :Christianity ;
+    rdfs:comment "The circumstances behind his \"turning away\" from Paul are unknown. Likewise, Paul's description of him as being \"is Asia\" isn't specific enough to assign a place. "@en .
+
+:Herodias a :Woman ;
+    rdfs:label "Herodias"@en ;
+    :description "wife of Herod Antipas who had John the Baptist put to death"@en ;
+    :hasOnlyGenealogyMention false ;
+    :spouseOf :HerodAntipas,
+        :PhilipSonOfHerod ;
+    rdfs:comment "Herodias had John the Baptist put to death"@en .
+
+:Hymenaeus a :Man ;
+    rdfs:label "Hymenaeus"@en ;
+    :collaboratesWith :AlexanderTheHeretic,
+        :Philetus .
+
+:Jared a :Man ;
+    rdfs:label "Jared"@en ;
+    :childOf :Mahalaleel ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Enoch .
+
+:Joda a :Man ;
+    rdfs:label "Joda"@en ;
+    :childOf :Joanan ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Josech .
+
+:JonahOfBethsaida a :Man ;
+    rdfs:label "Jonah"@en ;
+    :description "Father of Peter and Andrew, two of Jesus' 12 disciples"^^xsd:string ;
+    :parentOf :Andrew,
+        :SimonPeter ;
+    rdfs:comment "Bethsaide is assumed as his place of residence because his sons were from there. He was probably a fisherman, though nothing else is said of him in the New Testament."^^xsd:string .
+
+:JosephBarsabbas a :Man ;
+    rdfs:label "Joseph Barsabbas"@en ;
+    :collaboratesWith :SimonPeter ;
+    :description "an early Christian who was put forward (but not chosen) as a replacement for Judas Iscariot"^^xsd:string ;
+    :ethnicity :Jewish .
+
+:JudasOfAntioch a :Man ;
+    rdfs:label "Judas"@en ;
+    :collaboratesWith :Barnabas,
+        :Paul ;
+    :description "a prophet in the church at Antioch"^^xsd:string .
+
+:Lamech a :Man ;
+    rdfs:label "Lamech"@en ;
+    :childOf :Methuselah ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Noah .
+
+:Lois a :Woman ;
+    rdfs:label "Lois"@en ;
+    :description "the grandmother of Timothy"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Eunice ;
+    :religiousBelief :Christianity ;
+    rdfs:comment "Her Christian belief is implied by Paul's commendation of her faith. Her daughter Eunice lived in Lystra, but her residence is unknown. "^^xsd:string .
+
+:Macedonian a :EthnicityAttribute ;
+    rdfs:label "Macedonian"@en ;
+    :ethnicityOf :Aristarchus,
+        :GaiusOfMacedonia ;
+    rdfs:comment "Of the region of Macedonia (and therefore also Greek)."@en .
+
+:Mahalaleel a :Man ;
+    rdfs:label "Mahalaleel"@en ;
+    :childOf :CainanSonOfEnosh ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Jared .
+
+:Matthan a :Man ;
+    rdfs:label "Matthan"@en ;
+    :childOf :Eleazar ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :parentOf :JacobSonOfMatthan .
+
+:Methuselah a :Man ;
+    rdfs:label "Methuselah"@en ;
+    :childOf :Enoch ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Lamech .
+
+:Moabite a :EthnicityAttribute ;
+    rdfs:label "Moabite"@en ;
+    :ethnicityOf :Balak,
+        :Ruth ;
+    rdfs:comment "Not mentioned in the New Testament: of the people of Moab, a non-Jewish group."@en .
+
+:Nahor a :Man ;
+    rdfs:label "Nahor"@en ;
+    :childOf :Serug ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Terah .
+
+:Nazareth a :City ;
+    rdfs:label "Nazareth"@en ;
+    :location :NazarethGeodata ;
+    :residentPlaceOf :Mary ;
+    :subregionOf :Galilee .
+
+:Noah a :Man ;
+    rdfs:label "Noah"@en ;
+    :childOf :Lamech ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Shem .
+
+:Nympha a :Woman ;
+    rdfs:label "Nympha"@en ;
+    :collaboratesWith :Paul ;
+    :description "the church in Laodicea met in her house"@en ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Laodicea ;
+    rdfs:comment "The Church in Laodicea met in her house. Some manuscript variants indicate a man rather than a woman. "^^xsd:string .
+
+:Peleg a :Man ;
+    rdfs:label "Peleg"@en ;
+    :childOf :Eber ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Reu .
+
+:Philemon a :Man ;
+    rdfs:label "Philemon"@en ;
+    :collaboratesWith :Archippus ;
+    :spouseOf :Apphia ;
+    rdfs:comment """His residence in Colossae is implied from his relationship to Archippus and Onesimus (Col.4.9; Col.4.17). He may have been been a native as well. 
+Paul describes him as "our beloved fellow worker"."""@en .
+
+:Philip a :Man ;
+    rdfs:label "Philip"@en ;
+    :collaboratesWith :Andrew ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :ethnicity :Galilean .
+
+:Phoebe a :Woman ;
+    rdfs:label "Phoebe"@en ;
+    :collaboratesWith :Paul ;
+    :description "Deaconess of the Church of Cenchreae"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Cenchreae ;
+    rdfs:comment "Paul's commendation of Phoebe in Romans strongly suggests she delivered the letter"@en .
+
+:Phygelus a :Man ;
+    rdfs:label "Phygelus"@en ;
+    :description "a Christian who refused to help Paul during his Roman imprisonment"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Hermogenes,
+        :Paul ;
+    :religiousBelief :Christianity ;
+    rdfs:comment "The circumstances behind his \"turning away\" from Paul are unknown. Likewise, Paul's description of him as being \"is Asia\" isn't specific enough to assign a place. "@en .
+
+:Rahab a :Woman ;
+    rdfs:label "Rahab"@en ;
+    :description "An Old Testament example of faith who hid Joshua's spies"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "prostitute"@en ;
+    :parentOf :Boaz ;
+    :spouseOf :Salmon .
+
+:Reu a :Man ;
+    rdfs:label "Reu"@en ;
+    :childOf :Peleg ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Serug .
+
+:Rhoda a :Woman ;
+    rdfs:label "Rhoda"@en ;
+    :description "a maid in the house of Mary, mother of John Mark"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :MaryMotherOfJohnMark ;
+    :occupation "maid"^^xsd:string ;
+    :residentPlace :Jerusalem ;
+    rdfs:comment "One might infer Rhoda was a Christian because of her mistress' faith, and her joy in seeing Peter after his release."^^xsd:string .
+
+:RufusOfRome a :Man ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul ;
+    :possiblySamePersonAs :Rufus ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "There are no firm grounds for identifying this Rufus as the same person as the son of Simon of Cyrene mentioned in Mark 15 (though the tradition that Mark's Gospel was written in Rome makes this an intriguing possibility). "^^xsd:string .
+
+:SaulSonOfKish a :Man ;
+    rdfs:label "Saul"@en ;
+    :childOf :Kish ;
+    :memberOf :TribeOfBenjamin ;
+    :occupation "King of Israel"^^xsd:string .
+
+:Serug a :Man ;
+    rdfs:label "Serug"@en ;
+    :childOf :Reu ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Nahor .
+
+:Seth a :Man ;
+    rdfs:label "Seth"@en ;
+    :childOf :Adam ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Enos .
+
+:ShealtielSonOfNeri a :Man ;
+    rdfs:label "Shealtiel"@en ;
+    :childOf :Neri ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish .
+
+:Shelah a :Man ;
+    rdfs:label "Shelah"@en ;
+    :childOf :CainanSonOfArphaxad ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Eber .
+
+:Shem a :Man ;
+    rdfs:label "Shem"@en ;
+    :childOf :Noah ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Arphaxad .
+
+:SimonTheTanner a :Man ;
+    rdfs:label "Simon"@en ;
+    :collaboratesWith :SimonPeter ;
+    :description "Simon Peter stayed at Simon the Tanner's house in Joppa"@en ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "tanner"^^xsd:string ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Joppa .
+
+:SimonTheZealot a :Man ;
+    rdfs:label "Simon"@en ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :ethnicity :Galilean ;
+    :relativeOf :Andrew ;
+    rdfs:comment "Simon the Zealot was also known as Simon the Cananaean (but the term is one of political, not geographic, affiliation)."@en .
+
+:Tabitha a :Woman ;
+    rdfs:label "Dorcas"@en,
+        "Tabitha"@en ;
+    :description "a Christian in Joppa known for her charity"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :SimonPeter ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Joppa ;
+    rdfs:comment "The Aramaic name Tabitha corresponds to the Greek form Dorcas. She probably also knew Simon the Tanner. "@en .
+
+:Tertullus a :Man ;
+    rdfs:label "Tertullus"@en ;
+    :collaboratesWith :AnaniasTheHighPriest ;
+    :description "an orator enlisted by Ananias the high priest to speak against Paul to Felix"^^xsd:string ;
+    :enemyOf :Paul ;
+    :knows :Felix ;
+    :occupation "orator"^^xsd:string ;
+    rdfs:comment "Speaking on behalf of the Sanhedrin does not imply Tertullus was Jewish: more likely (but not certain), he was a Roman, hired for his familiarity with Roman law. But the account describes him as traveling from Jerusalem with the others."@en .
+
+:Thessalonica a :City ;
+    rdfs:label "Thessalonica"@en ;
+    :location :ThessalonicaGeodata ;
+    :residentPlaceOf :Secundus ;
+    :subregionOf :Macedonia .
+
+:Thomas a :Man ;
+    rdfs:label "Thomas"@en ;
+    :collaboratesWith :Andrew ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :ethnicity :Galilean .
+
+:Troas a :City ;
+    rdfs:label "Troas"@en ;
+    :location :TroasGeodata ;
+    :residentPlaceOf :Eutychus ;
+    :visitedPlaceOf :GaiusOfDerbe .
+
+:Zechariah a :Man ;
+    rdfs:label "Zechariah"@en ;
+    :parentOf :JohntheBaptist ;
+    :spouseOf :Elizabeth .
+
+:ZechariahSonOfBarachiah a :Man ;
+    rdfs:label "Zechariah"@en ;
+    :childOf :Barachiah ;
+    :ethnicity :Jewish .
+
+:Abel a :Man ;
+    rdfs:label "Abel"@en ;
+    :childOf :Adam,
+        :Eve ;
+    :siblingOf :Cain .
+
+:Abiud a :Man ;
+    rdfs:label "Abiud"@en ;
+    :childOf :Zerubbabel ;
+    :ethnicity :Jewish ;
+    :parentOf :EliakimSonOfAbiud .
+
+:Achim a :Man ;
+    rdfs:label "Achim"@en ;
+    :childOf :Zadok ;
+    :ethnicity :Jewish ;
+    :parentOf :Eliud .
+
+:Addi a :Man ;
+    rdfs:label "Addi"@en ;
+    :childOf :Cosam ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MelchiSonOfAddi .
+
+:Admin a :Man ;
+    rdfs:label "Admin"@en,
+        "Aram"@en ;
+    :childOf :Arni ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Amminadab .
+
+:Ahaz a :Man ;
+    rdfs:label "Ahaz"@en ;
+    :childOf :Jotham ;
+    :description "King of Judah during the time of Isaiah"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king"@en ;
+    :parentOf :Hezekiah ;
+    rdfs:comment "See OT descriptions in 2 Kings 16; Isa. 7-9; 2 Chr. 28."@en .
+
+:Alphaeus a :Man ;
+    rdfs:label "Alphaeus"@en ;
+    :description "The father of James, one of the Twelve"@en ;
+    :ethnicity :Galilean ;
+    :parentOf :JamesSonOfAlphaeus ;
+    :spouseOf :MaryWifeOfClopas ;
+    rdfs:comment "The identification of Alphaeus with Clopas is not completely certain: see ISBE for Alphaeus."^^xsd:string .
+
+:Amos a :Man ;
+    rdfs:label "Amos"@en ;
+    :childOf :Manasseh ;
+    :ethnicity :Jewish ;
+    :parentOf :Josiah .
+
+:AmosSonOfNahum a :Man ;
+    rdfs:label "Amos"@en ;
+    :childOf :Nahum ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MattathaisSonOfAmos ;
+    rdfs:comment "There's no evidence other than the similar (and not uncommon) name to suggest this man is the same Amos as the Old Testament prophet. "@en .
+
+:Ampliatus a :Man ;
+    rdfs:label "Ampliatus"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Anna a :Woman ;
+    rdfs:label "Anna"@en ;
+    :childOf :Phanuel ;
+    :description "a prophetess who spoke about the infant Jesus in the temple"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :memberOf :TribeOfAsher ;
+    :occupation "prophetess"^^xsd:string ;
+    :religiousBelief :Judaism .
+
+:Apelles a :Man ;
+    rdfs:label "Apelles"@en ;
+    :description "a Christian in Rome whom Paul greeted"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Asher a :Man ;
+    rdfs:label "Asher"@en ;
+    :childOf :Jacob ;
+    :description "One of the 12 Patriarchs of Israel"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :siblingOf :Gad ;
+    rdfs:comment "One of the sons of Judah"@en .
+
+:Asyncritus a :Man ;
+    rdfs:label "Asyncritus"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Azor a :Man ;
+    rdfs:label "Azor"@en ;
+    :childOf :EliakimSonOfAbiud ;
+    :ethnicity :Jewish ;
+    :parentOf :Zadok .
+
+:Caiaphas a :Man ;
+    rdfs:label "Caiaphas"@en ;
+    :collaboratesWith :Annas ;
+    :description "Jewish high priest during Jesus' ministry"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :knows :PontiusPilate ;
+    :occupation "high priest"^^xsd:string ;
+    :relativeOf :Annas .
+
+:Cain a :Man ;
+    rdfs:label "Cain"@en ;
+    :childOf :Adam,
+        :Eve ;
+    :description "the first son of Adam and Eve, who killed his brother Abel"^^xsd:string ;
+    :siblingOf :Abel .
+
+:Canaan a :Region ;
+    rdfs:label "Canaan"@en ;
+    :residentPlaceOf :Abraham,
+        :Hagar,
+        :Sarah .
+
+:Clement a :Man ;
+    rdfs:label "Clement"@en ;
+    :collaboratesWith :Euodia,
+        :Paul,
+        :Syntyche ;
+    :description "a companion of the Apostle Paul"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity .
+
+:Cosam a :Man ;
+    rdfs:label "Cosam"@en ;
+    :childOf :Elmadam ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Addi .
+
+:Demetrius a :Man ;
+    rdfs:label "Demetrius"@en ;
+    :collaboratesWith :JohnSonOfZebedee ;
+    :description "a disciple mentioned in 3 John as having a good reputation"@en ;
+    :knows :GaiusTheBeloved ;
+    :possiblySamePersonAs :DemetriusTheSilversmith ;
+    rdfs:comment "See comment on DemetriusTheSilversmith. Keener suggests that 3John is a letter of support which Demetrius carried to Gaius. "@en .
+
+:Eber a :Man ;
+    rdfs:label "Eber"@en ;
+    :childOf :Shelah ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :parentOf :Peleg .
+
+:Eleazar a :Man ;
+    rdfs:label "Eleazar"@en ;
+    :childOf :Eliud ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :parentOf :Matthan .
+
+:EliakimSonOfAbiud a :Man ;
+    rdfs:label "Eliakim"@en ;
+    :childOf :Abiud ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :parentOf :Azor .
+
+:EliakimSonOfMelea a :Man ;
+    rdfs:label "Eliakim"@en ;
+    :childOf :Melea ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Jonam .
+
+:Eliezer a :Man ;
+    rdfs:label "Eliezer"@en ;
+    :childOf :Jorim ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :JoshuaSonOfEliezer .
+
+:Eliud a :Man ;
+    rdfs:label "Eliud"@en ;
+    :childOf :Achim ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Eleazar .
+
+:Elmadam a :Man ;
+    rdfs:label "Elmadam"@en ;
+    :childOf :Er ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Cosam .
+
+:Er a :Man ;
+    rdfs:label "Er"@en ;
+    :childOf :JoshuaSonOfEliezer ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Elmadam .
+
+:Esli a :Man ;
+    rdfs:label "Esli"@en ;
+    :childOf :Naggai ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Nahum .
+
+:Eubulus a :Man ;
+    rdfs:label "Eubulus"@en ;
+    :collaboratesWith :Paul ;
+    :description "a Christian companion of the Apostle Paul in his Roman imprisonment"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "His residence in Rome assumes "^^xsd:string .
+
+:Eve a :Woman ;
+    rdfs:label "Eve"@en ;
+    :description "the first woman created by God"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Abel,
+        :Cain ;
+    :spouseOf :Adam .
+
+:Festus a :Man ;
+    rdfs:label "Festus"@en ;
+    :description "governor of Judea after Felix"^^xsd:string ;
+    :ethnicity :Roman ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Bernice,
+        :HerodAgrippaII,
+        :Paul ;
+    :occupation "governor"^^xsd:string ;
+    :residentPlace :Caesarea ;
+    :visitedPlace :Jerusalem .
+
+:Heli a :Man ;
+    rdfs:label "Heli"@en ;
+    :childOf :MatthatSonOfLeviSonOfMelki ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Joseph ;
+    rdfs:comment "See the comment on Joseph for why Heli is listed as parentOf Mary, not Joseph, despite Luke 3:23."@en .
+
+:Hermas a :Man ;
+    rdfs:label "Hermas"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Hermes a :Man ;
+    rdfs:label "Hermes"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:HerodAgrippaI a :Man ;
+    rdfs:label "Herod Agrippa I"@en ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "king"@en ;
+    :parentOf :Bernice,
+        :Drusilla .
+
+:HerodAgrippaII a :Man ;
+    rdfs:label "Herod Agrippa II"@en ;
+    :description "King of Chalcis from AD 50-92: the last member of the Herodian dynasty"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "king"@en ;
+    :siblingOf :Bernice,
+        :Drusilla .
+
+:HerodTheGreat a :Man ;
+    rdfs:label "Herod"@en ;
+    :description "King of Judea at the time of Jesus' birth"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "king"@en ;
+    :parentOf :Archelaus,
+        :HerodAntipas,
+        :PhilipSonOfHerod .
+
+:Herodion a :Man ;
+    rdfs:label "Herodion"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "Paul's description of Herodian as \"my kinsman\" is taken in the general snese (e.g. coming from the same region), rather than literally. "^^xsd:string .
+
+:Hezekiah a :Man ;
+    rdfs:label "Hezekiah"@en ;
+    :childOf :Ahaz ;
+    :ethnicity :Jewish ;
+    :parentOf :Manasseh .
+
+:JacobSonOfMatthan a :Man ;
+    rdfs:label "Jacob"@en ;
+    :childOf :Matthan ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :parentOf :Joseph ;
+    rdfs:comment "Grandfather of Joseph, the husband of Mary, the mother of Jesus"@en ;
+    owl:differentFrom :Jacob .
+
+:Jannai a :Man ;
+    rdfs:label "Jannai"@en ;
+    :childOf :JosephSonOfMattathias ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MelchiSonOfJannai .
+
+:Jechoniah a :Man ;
+    rdfs:label "Jechoniah"@en ;
+    :childOf :Josiah ;
+    :ethnicity :Jewish ;
+    :parentOf :Shealtiel .
+
+:Jehoshaphat a :Man ;
+    rdfs:label "Jehoshaphat"@en ;
+    :childOf :Asaph ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Joram .
+
+:Jesse a :Man ;
+    rdfs:label "Jesse"@en ;
+    :childOf :Obed ;
+    :description "the father of King David"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :David .
+
+:Joanan a :Man ;
+    rdfs:label "Joanan"@en ;
+    :childOf :Rhesa ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Joda .
+
+:JohnMark a :Man ;
+    rdfs:label "John Mark"@en ;
+    :childOf :MaryMotherOfJohnMark ;
+    :collaboratesWith :Barnabas ;
+    :relativeOf :Barnabas ;
+    rdfs:comment "One of Paul's companions"@en .
+
+:Jonam a :Man ;
+    rdfs:label "Jonam"@en ;
+    :childOf :EliakimSonOfMelea ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :JosephSonOfJonam .
+
+:Joppa a :City ;
+    rdfs:label "Joppa"@en ;
+    :location :JoppaGeodata ;
+    :residentPlaceOf :SimonTheTanner,
+        :Tabitha ;
+    :subregionOf :Judea ;
+    rdfs:comment "In Joppa, Peter raised the woman Tabitha from the dead. Later, he had a vision while praying there that prepared him for the coming of the Holy Spirit to the first Gentiles."@en .
+
+:Joram a :Man ;
+    rdfs:label "Joram"@en ;
+    :childOf :Jehoshaphat ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Uzziah ;
+    rdfs:comment "His occupation as King comes from Old Testament sources. "^^xsd:string .
+
+:Jorim a :Man ;
+    rdfs:label "Jorim"@en ;
+    :childOf :MatthatSonOfLeviSonOfSimeon ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Eliezer .
+
+:Josech a :Man ;
+    rdfs:label "Josech"@en ;
+    :childOf :Joda ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Semein .
+
+:JosephSonOfJonam a :Man ;
+    rdfs:label "Joseph"@en ;
+    :childOf :Jonam ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :JudahSonOfJoseph .
+
+:JosephSonOfMattathias a :Man ;
+    rdfs:label "Joseph"@en ;
+    :childOf :MattathaisSonOfAmos ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Jannai .
+
+:JoshuaSonOfEliezer a :Man ;
+    rdfs:label "Joshua"@en ;
+    :childOf :Eliezer ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Er .
+
+:Josiah a :Man ;
+    rdfs:label "Josiah"@en ;
+    :childOf :Amos ;
+    :ethnicity :Jewish ;
+    :parentOf :Jechoniah .
+
+:Jotham a :Man ;
+    rdfs:label "Jotham"@en ;
+    :childOf :Uzziah ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Ahaz ;
+    rdfs:comment "His occupation as King comes from Old Testament sources, 2Chron.26-27. "^^xsd:string .
+
+:JudahSonOfJoseph a :Man ;
+    rdfs:label "Judah"@en ;
+    :childOf :JosephSonOfJonam ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :SimeonSonOfJudah .
+
+:Julia a :Woman ;
+    rdfs:label "Julia"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "Julia may be the spouse or sister of Philologus, given their mention together in Rom.16.15"^^xsd:string .
+
+:Junia a :Woman ;
+    rdfs:label "Junia"@en ;
+    :collaboratesWith :Andronicus ;
+    :description "a \"kinsman\" and fellow prisoner of Paul"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment """Given their joint mention by Paul, it seems likely that Junia was Andronicus' spouse, though this is not explicitly stated. Paul's description of Andronicus and Junia as "my kinsmen" is taken in the general sense (e.g. coming from the same region), rather than literally. 
+Given they were Christians before Paul, their conversion must have been relatively early in the history of the church, and so it is quite likely they also visited Jerusalem (though this is nowhere stated). 
+Much controversy rests on whether this description means they were well-known _to_ the apostles, or well-known _as_ apostles. """@en .
+
+:Lazarus a :Man ;
+    rdfs:label "Lazarus"@en ;
+    :description "a man Jesus brought back to life"@en ;
+    :knows :Jesus ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Bethany ;
+    :siblingOf :Martha,
+        :MaryOfBethany ;
+    rdfs:comment "There's no evidence to suggest a connection between Lazarus of Bethany and the same-named subject of Jesus' parable."@en .
+
+:Lydia a :Woman ;
+    rdfs:label "Lydia"@en ;
+    :collaboratesWith :Paul ;
+    :description "a convert from Paul's preaching in Philippi"@en ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Thyatira ;
+    :occupation "seller of purple goods"@en ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Philippi .
+
+:Maath a :Man ;
+    rdfs:label "Maath"@en ;
+    :childOf :MattathiasSonOfSemein ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Naggai .
+
+:Manasseh a :Man ;
+    rdfs:label "Manasseh"@en ;
+    :childOf :Hezekiah ;
+    :ethnicity :Jewish ;
+    :parentOf :Amos .
+
+:ManassehThePatriarch a :Man ;
+    rdfs:label "Manasseh"@en ;
+    :childOf :Jacob ;
+    :ethnicity :Jewish ;
+    :siblingOf :Gad .
+
+:MaryOfRome a :Woman ;
+    rdfs:label "Mary"@en ;
+    :description "a woman to whom Paul sent greetings in his letter to the Romans"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Mattatha a :Man ;
+    rdfs:label "Mattatha"@en ;
+    :childOf :Nathan ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Menna .
+
+:MattathaisSonOfAmos a :Man ;
+    rdfs:label "Mattathias"@en ;
+    :childOf :AmosSonOfNahum ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :JosephSonOfMattathias .
+
+:MattathiasSonOfSemein a :Man ;
+    rdfs:label "Mattathias"@en ;
+    :childOf :Semein ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Maath .
+
+:MatthatSonOfLeviSonOfMelki a :Man ;
+    rdfs:label "Matthat"@en ;
+    :childOf :LeviSonOfMelki ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Heli .
+
+:MatthatSonOfLeviSonOfSimeon a :Man ;
+    rdfs:label "Matthat"@en ;
+    :childOf :LeviSonOfSimeon ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Jorim .
+
+:MelchiSonOfAddi a :Man ;
+    rdfs:label "Melchi"@en ;
+    :childOf :Addi ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Neri .
+
+:MelchiSonOfJannai a :Man ;
+    rdfs:label "Melchi"@en ;
+    :childOf :Jannai ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :LeviSonOfMelki .
+
+:Melea a :Man ;
+    rdfs:label "Melea"@en ;
+    :childOf :Menna ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :EliakimSonOfMelea .
+
+:Menna a :Man ;
+    rdfs:label "Menna"@en ;
+    :childOf :Mattatha ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Melea .
+
+:Naggai a :Man ;
+    rdfs:label "Naggai"@en ;
+    :childOf :Maath ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Esli .
+
+:Nahshon a :Man ;
+    rdfs:label "Nahshon"@en ;
+    :childOf :Amminadab ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Salmon .
+
+:Nahum a :Man ;
+    rdfs:label "Nahum"@en ;
+    :childOf :Esli ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :AmosSonOfNahum .
+
+:Nathan a :Man ;
+    rdfs:label "Nathan"@en ;
+    :childOf :David ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Mattatha ;
+    rdfs:comment "This is not the prophet contemporary with King David, but David's son."@en .
+
+:Nereus a :Man ;
+    rdfs:label "Nereus"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Neri a :Man ;
+    rdfs:label "Neri"@en ;
+    :childOf :MelchiSonOfAddi ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :ShealtielSonOfNeri .
+
+:Olympas a :Man ;
+    rdfs:label "Olympas"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Patrobas a :Man ;
+    rdfs:label "Patrobas"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Persis a :Woman ;
+    rdfs:label "Persis"@en ;
+    :description "One who worked hard in the Lord among the Roman Christians"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Philippi a :City ;
+    rdfs:label "Philippi"@en ;
+    :location :PhilippiGeodata ;
+    :residentPlaceOf :Euodia,
+        :Syntyche ;
+    :visitedPlaceOf :Lydia .
+
+:Philologus a :Man ;
+    rdfs:label "Philologus"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Phlegon a :Man ;
+    rdfs:label "Phlegon"@en ;
+    :description "a Roman to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Phoenicia a :Region ;
+    rdfs:label "Phoenicia"@en .
+
+:PontiusPilate a :Man ;
+    rdfs:label "Pontius Pilate"@en ;
+    :collaboratesWith :Archelaus,
+        :HerodAntipas .
+
+:Rhesa a :Man ;
+    rdfs:label "Rhesa"@en ;
+    :childOf :Zerubbabel ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Joanan .
+
+:Ruth a :Woman ;
+    rdfs:label "Ruth"@en ;
+    :description "an ancestor of King David in Matthew's genealogy of Jesus"@en ;
+    :ethnicity :Moabite ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Obed ;
+    :spouseOf :Boaz ;
+    rdfs:comment "An Old Testament figure"@en .
+
+:Samaritan a :EthnicityAttribute ;
+    rdfs:label "Samaritan"@en ;
+    :ethnicityOf :HerodAntipas ;
+    rdfs:comment "A Jewish sect centered around the city of Samaria: in New Testament times, there was great emnity between Samaritans and Jews."@en ;
+    owl:differentFrom :Galilean,
+        :Judean .
+
+:Semein a :Man ;
+    rdfs:label "Semein"@en ;
+    :childOf :Josech ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MattathiasSonOfSemein .
+
+:Shealtiel a :Man ;
+    rdfs:label "Shealtiel"@en ;
+    :childOf :Jechoniah ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Zerubbabel .
+
+:SimeonSonOfJudah a :Man ;
+    rdfs:label "Simeon"@en ;
+    :childOf :JudahSonOfJoseph ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :LeviSonOfSimeon .
+
+:SimeonThePatriarch a :Man ;
+    rdfs:label "Simeon"@en ;
+    :childOf :Jacob ;
+    :description "One of the twelve sons of Jacob, whose name is adopted for one of the Twelve Tribes of Israel."^^xsd:string ;
+    :ethnicity :Jewish ;
+    :siblingOf :Gad .
+
+:SimonOfCyrene a :Man ;
+    rdfs:label "Simon"@en ;
+    :description "Simon was forced to carry Jesus' cross by the Romans who were taking him to be cruficied"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :parentOf :Alexander,
+        :Rufus ;
+    rdfs:comment "Identified as a Jew because, though a foreigner, he was in Jerusalem at the time of Passover"@en .
+
+:Stachys a :Man ;
+    rdfs:label "Stachys"@en ;
+    :description "a Christian in Rome to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Tamar a :Woman ;
+    rdfs:label "Tamar"@en ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Perez,
+        :Zerah .
+
+:Terah a :Man ;
+    rdfs:label "Terah"@en ;
+    :childOf :Nahor ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Abraham,
+        :Sarah .
+
+:Tertius a :Man ;
+    rdfs:label "Tertius"@en ;
+    :collaboratesWith :Paul ;
+    :description "the scribe of Paul's letter to the Roman church"@en ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "His residence in Corinth follows from the inference that Paul resided there when he wrote the letter to the Roman church.  "^^xsd:string .
+
+:Urbanus a :Man ;
+    rdfs:label "Urbanus"@en ;
+    :collaboratesWith :Paul ;
+    :description "a Christian in Rome to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Uriah a :Man ;
+    rdfs:label "Uriah"@en ;
+    :collaboratesWith :David ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :hasEnemy :David ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "soldier"@en ;
+    :spouseOf :Bathsheba ;
+    rdfs:comment "From OT sources, Uriah was a Hittite and a soldier in David's army (therefore having both collaboratesWith and hasEnemy relationships with David). "@en .
+
+:Uzziah a :Man ;
+    rdfs:label "Uzziah"@en ;
+    :childOf :Joram ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Jotham ;
+    rdfs:comment "His occupation as King comes from Old Testament sources. "^^xsd:string .
+
+:Zadok a :Man ;
+    rdfs:label "Zadok"@en ;
+    :childOf :Azor ;
+    :ethnicity :Jewish ;
+    :parentOf :Achim .
+
+:Zebedee a :Man ;
+    rdfs:label "Zebedee"@en ;
+    :parentOf :JamesSonOfZebedee,
+        :JohnSonOfZebedee ;
+    :spouseOf :Salome .
+
+:Adam a :Man ;
+    rdfs:label "Adam"@en ;
+    :description "The first created human"^^xsd:string ;
+    :parentOf :Abel,
+        :Cain,
+        :Seth ;
+    :spouseOf :Eve ;
+    rdfs:comment "Though Luke's geneaology lists Adam as \"the son of God\", this is not in the biological sense of childOf"@en .
+
+:Amminadab a :Man ;
+    rdfs:label "Amminadab"@en ;
+    :childOf :Admin,
+        :Ram ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Nahshon .
+
+:Ananias a :Man ;
+    rdfs:label "Ananias"@en ;
+    :description "A member of the early church in Jerusalem who conspired with his wife to deceive the church about a gift of property, and who was consequently struck dead."^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasAntagonist :SimonPeter ;
+    :knows :SimonPeter ;
+    :spouseOf :Sapphira ;
+    rdfs:comment "Residence in Jerusalem is assumed by the account in Acts 5, where the church is still primarily Jersualem-based. "^^xsd:string .
+
+:Andronicus a :Man ;
+    rdfs:label "Andronicus"@en ;
+    :collaboratesWith :Junia,
+        :Paul ;
+    :description "A Christian in Rome to whom Paul sent greetings"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    rdfs:comment "Paul's description of Andronicus as \"my kinsman\" is taken in the general snese (e.g. coming from the same region), rather than literally. As a \"fellow-prisoner\", he and Junia are assumed to be collaborators with Paul. "@en .
+
+:Archelaus a :Man ;
+    rdfs:label "Archelaus"@en ;
+    :childOf :HerodTheGreat ;
+    :collaboratesWith :PontiusPilate ;
+    :description "one of the sons of Herod the Great who ruled Judea for a time"^^xsd:string ;
+    :occupation "ruler"^^xsd:string ;
+    :siblingOf :HerodAntipas,
+        :PhilipSonOfHerod .
+
+:Arni a :Man ;
+    rdfs:label "Arni"@en ;
+    :childOf :Hezron ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Admin ;
+    :possiblySamePersonAs :Ram ;
+    rdfs:comment "Likely a variant form of Ram, as Hezron's son is called in Matthew's genealogy. "@en .
+
+:Asaph a :Man ;
+    rdfs:label "Asaph"@en ;
+    :childOf :AbijahSonOfRehoboam ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Jehoshaphat ;
+    :relativeOf :AbijahSonOfRehoboam ;
+    rdfs:comment "Not the same as the psalmist and leader of King David's choir in 1Chr.6.39."@en .
+
+:Bar-Jesus a :Man ;
+    rdfs:label "Bar-Jesus"@en ;
+    :antagonistOf :Paul,
+        :Silas ;
+    :description "a magician and false prophet who Paul and Silas encountered on Cyprus"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :knows :Paul,
+        :SergiusPaulus,
+        :Silas ;
+    :occupation "magician"^^xsd:string ;
+    rdfs:comment "Elymas is a transliteration of an Aramaic or Arabic word equivalent to 'magician'."@en .
+
+:Bathsheba a :Woman ;
+    rdfs:label "Bathsheba"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Solomon ;
+    :spouseOf :David,
+        :Uriah ;
+    rdfs:comment "Not named in the New Testament, but referred to in Matt.1.6 as \"the wife of Uriah\". Since Uriah was a Hittite, it's not clear what her religiousBelief might have been. "@en .
+
+:Benjamin a :Man ;
+    rdfs:label "Benjamin"@en ;
+    :childOf :Jacob,
+        :Rachel ;
+    :description "One of the 12 Patriarchs of Israel"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :siblingOf :Gad .
+
+:Bethany a :City ;
+    rdfs:label "Bethany"@en ;
+    :residentPlaceOf :Lazarus,
+        :Martha,
+        :MaryOfBethany ;
+    :subregionOf :Judea .
+
+:Caesarea a :City ;
+    rdfs:label "Caesarea"@en ;
+    :location :CaesareaGeodata ;
+    :residentPlaceOf :Drusilla,
+        :Felix,
+        :Festus ;
+    :subregionOf :Samaria .
+
+:Epaenetus a :Man ;
+    rdfs:label "Epaenetus"@en ;
+    :description "A Christian in Rome whom Paul describes as \"the first convert to Christ in Asia\""@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome ;
+    :visitedPlace :Asia .
+
+:Esau a :Man ;
+    rdfs:label "Esau"@en ;
+    :childOf :Isaac,
+        :Rebecca ;
+    :description "a character from the Old Testament era"@en ;
+    :ethnicity :Jewish ;
+    :siblingOf :Jacob .
+
+:Euodia a :Woman ;
+    rdfs:label "Euodia"@en ;
+    :collaboratesWith :Clement,
+        :Paul,
+        :Syntyche ;
+    :description "a Christian in Philippi"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Philippi .
+
+:GaiusOfCorinth a :Man ;
+    rdfs:label "Gaius"@en ;
+    :collaboratesWith :Paul ;
+    :description "one whom Paul baptized in Corinth"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "Since Paul's Epistle to the Romans was written from Corinth, this is assumed to be the one Paul describes as \"host to me and the whole church\""@en .
+
+:Hagar a :Woman ;
+    rdfs:label "Hagar"@en ;
+    :antagonistOf :Sarah ;
+    :description "mother of Ishmael; servant to Abraham's wife Sarah "@en ;
+    :ethnicity :Egyptian ;
+    :hasAntagonist :Sarah ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Abraham ;
+    :occupation "servant"@en ;
+    :residentPlace :Canaan ;
+    rdfs:comment "her son Ishmael is not named in the New Testament"^^xsd:string .
+
+:Hezron a :Man ;
+    rdfs:label "Hezron"@en ;
+    :childOf :Perez ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Arni,
+        :Ram .
+
+:Israel a :Nation ;
+    rdfs:label "Israel"@en ;
+    :nativePlaceOf :Gamaliel ;
+    :subregion :Galilee,
+        :Judea,
+        :Samaria ;
+    rdfs:comment "This name designates the nation inhabited by the descendants of Jacob's twelve sons. For Israel the patriarch, see Jacob. For the inhabitants of this nation, see Israelites. "@en .
+
+:JamesSonOfAlphaeus a :Man ;
+    rdfs:label "James"@en ;
+    :childOf :Alphaeus ;
+    :collaboratesWith :Andrew ;
+    :ethnicity :Galilean ;
+    :siblingOf :Joses .
+
+:JamesSonOfZebedee a :Man ;
+    rdfs:label "James"@en ;
+    :childOf :Salome,
+        :Zebedee ;
+    :collaboratesWith :Andrew ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :siblingOf :JohnSonOfZebedee .
+
+:Jason a :Man ;
+    rdfs:label "Jason"@en ;
+    :description " a companion of Paul's who sent greetings to the Roman church"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Lucius,
+        :Paul,
+        :Sosipater,
+        :Timothy ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "His residence in Corinth follows from the inference that Paul resided there when he wrote the letter to the Roman church.  \"kinsman\" here probably means that that he is a Jew, rather than an actual relative, given the number of people so designated in Romans 16. "^^xsd:string .
+
+:Joanna a :Woman ;
+    rdfs:label "Joanna"@en ;
+    :collaboratesWith :Jesus ;
+    :description "a woman wno contributed to Jesus' support"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Susanna ;
+    :religiousBelief :Christianity ;
+    :spouseOf :Chuza ;
+    :visitedPlace :Jerusalem ;
+    rdfs:comment "Probably of Jewish ethnicity"@en .
+
+:Joseph a :Man ;
+    rdfs:label "Joseph"@en ;
+    :childOf :Heli,
+        :JacobSonOfMatthan ;
+    :description "the earthly father of Jesus"@en ;
+    :occupation "carpenter"@en ;
+    :parentOf :Jesus ;
+    :spouseOf :Mary ;
+    rdfs:comment """Joseph was Jesus' parent in the normal sense, even though not his biological father.
+Luke 3:23 has "Joseph, son of Heli", though Matthew has Joseph's father named Jacob. Here I've represented the opinion that Joseph was actually son-in-law of Heli, and that Luke's geneaology describes Mary's lineage rather than Joseph's. """@en .
+
+:JosephThePatriarch a :Man ;
+    rdfs:label "Joseph"@en ;
+    :childOf :Jacob,
+        :Rachel ;
+    :ethnicity :Jewish ;
+    :siblingOf :Gad .
+
+:Judean a :EthnicityAttribute ;
+    rdfs:label "Judean"@en ;
+    :ethnicityOf :AlexanderOfTheSanhedrin,
+        :AnaniasTheHighPriest ;
+    rdfs:comment "The main subgroup of Jewish Palestine at the time of Christ: to be Judean therefore implies being Jewish as well. This is distinct from describing those of the tribe and lineage of Judah."@en ;
+    owl:differentFrom :Galilean,
+        :Samaritan .
+
+:LeviSonOfMelki a :Man ;
+    rdfs:label "Levi"@en ;
+    :childOf :MelchiSonOfJannai ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MatthatSonOfLeviSonOfMelki ;
+    owl:differentFrom :Levi .
+
+:LeviSonOfSimeon a :Man ;
+    rdfs:label "Levi"@en ;
+    :childOf :SimeonSonOfJudah ;
+    :description "One of the ancestors of Jesus mentioned in Luke's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :MatthatSonOfLeviSonOfSimeon ;
+    owl:differentFrom :Levi .
+
+:Lucius a :Man ;
+    rdfs:label "Lucius"@en ;
+    :description "a companion of Paul's who sent greetings to the Roman church"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Jason,
+        :Sosipater,
+        :Timothy ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "This person may be the same as Lucius of Cyrene, but there's no clear evidence other than the name. His residence in Corinth follows from the inference that Paul resided there when he wrote the letter to the Roman church.  \"kinsman\" here probably means that that he is a Jew, rather than an actual relation, given the number of people so designated in Romans 16. "^^xsd:string .
+
+:LuciusOfCyrene a :Man ;
+    rdfs:label "Lucius"@en ;
+    :collaboratesWith :Barnabas,
+        :Manaen,
+        :Paul,
+        :SimeonNiger ;
+    :description "a Christian leader in Antioch"^^xsd:string ;
+    rdfs:comment "This person may be the same as the Lucius in Rome, but there's no clear evidence other than the name."^^xsd:string .
+
+:Manaen a :Man ;
+    rdfs:label "Manaen"@en ;
+    :collaboratesWith :Barnabas,
+        :LuciusOfCyrene,
+        :Paul,
+        :SimeonNiger ;
+    :description "a Christian leader at Antioch"^^xsd:string ;
+    :knows :HerodAntipas ;
+    rdfs:comment "The term translated \"foster-brother\" means Manaen and Herod Antipas were raised together, though not literally relatives."^^xsd:string .
+
+:Martha a :Woman ;
+    rdfs:label "Martha"@en ;
+    :description "the sister of Lazarus and Mary who annointed Jesus before his death"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Jesus ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Bethany ;
+    :siblingOf :Lazarus,
+        :MaryOfBethany .
+
+:MaryOfBethany a :Woman ;
+    rdfs:label "Mary"@en ;
+    :description "a follower of Jesus who annointed him late in his ministry"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Jesus ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Bethany ;
+    :siblingOf :Lazarus,
+        :Martha ;
+    rdfs:comment "There are other accounts of an unnamed woman annointing Jesus with oil, and various arguments about whether these were the same or different women. "^^xsd:string .
+
+:Obed a :Man ;
+    rdfs:label "Obed"@en ;
+    :childOf :Boaz,
+        :Ruth ;
+    :description "One of the ancestors of Jesus mentioned in Matthew and Luke's geneaologies"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Jesse .
+
+:PhilipSonOfHerod a :Man ;
+    rdfs:label "Philip"@en ;
+    :childOf :HerodTheGreat ;
+    :description "King of the land east of the Jordan"^^xsd:string ;
+    :siblingOf :Archelaus,
+        :HerodAntipas ;
+    :spouseOf :Herodias .
+
+:Rachel a :Woman ;
+    rdfs:label "Rachel"@en ;
+    :description "one of Jacob's wives"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Benjamin,
+        :JosephThePatriarch ;
+    :religiousBelief :Judaism ;
+    :spouseOf :Jacob ;
+    rdfs:comment "Daughter of Laban and sister of Leah, who are not named in the New Testament. "@en .
+
+:Ram a :Man ;
+    rdfs:label "Ram"@en ;
+    :childOf :Hezron ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Amminadab ;
+    :possiblySamePersonAs :Arni .
+
+:Rebecca a :Woman ;
+    rdfs:label "Rebecca"@en ;
+    :description "husband of Isaac"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Esau,
+        :Jacob ;
+    :spouseOf :Isaac ;
+    rdfs:comment "Brother of Laban, who is not named in the New Testament. "^^xsd:string .
+
+:Rehoboam a :Man ;
+    rdfs:label "Rehoboam"@en ;
+    :childOf :Solomon ;
+    :description "A king of Israel, and one of the ancestors of Jesus mentioned in Matthew's geneaology"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king"^^xsd:string ;
+    :parentOf :AbijahSonOfRehoboam ;
+    :relativeOf :AbijahSonOfRehoboam ;
+    rdfs:comment "His occupation as king comes from the Old Testament, 1Kgs.12-14"^^xsd:string .
+
+:Rufus a :Man ;
+    rdfs:label "Rufus"@en ;
+    :childOf :SimonOfCyrene ;
+    :knows :Priscilla ;
+    :possiblySamePersonAs :RufusOfRome ;
+    :siblingOf :Alexander .
+
+:Salmon a :Man ;
+    rdfs:label "Salmon"@en ;
+    :childOf :Nahshon ;
+    :description "One of the ancestors of Jesus mentioned in Matthew and Luke's geneaologies"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Boaz ;
+    :spouseOf :Rahab ;
+    rdfs:comment "Luke's genealogy has Sala, a minor variant, but the relationships make clear it is the same person."^^xsd:string .
+
+:Samaria a :StateOrProvince ;
+    rdfs:label "Samaria"@en ;
+    :location :SamariaGeodata ;
+    :subregion :Caesarea,
+        :SamariaTheCity,
+        :Sychar ;
+    :subregionOf :Israel .
+
+:SimeonNiger a :Man ;
+    rdfs:label "Simeon"@en ;
+    :collaboratesWith :Barnabas,
+        :LuciusOfCyrene,
+        :Manaen,
+        :Paul ;
+    :description "A leader in the church of Antioch"^^xsd:string .
+
+:Solomon a :Man ;
+    rdfs:label "Solomon"@en ;
+    :childOf :Bathsheba,
+        :David ;
+    :description "King of Israel renowned for his wisdom"@en ;
+    :ethnicity :Jewish ;
+    :occupation "king"@en ;
+    :parentOf :Rehoboam .
+
+:Sosipater a :Man ;
+    rdfs:label "Sosipater"@en ;
+    :description "a companion of Paul's who sent greetings to the Roman church"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :ErastusTheTreasurer,
+        :GaiusOfCorinth,
+        :Jason,
+        :Lucius,
+        :Quartus,
+        :Tertius,
+        :Timothy ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "\"kinsman\" here probably means that that he is a Jew, rather than an actual relation, given the number of people so designated in Romans 16. His residence in Corinth follows from the inference that Paul resided there when he wrote the letter to the Roman church.  "@en .
+
+:Susanna a :Woman ;
+    rdfs:label "Susanna"@en ;
+    :collaboratesWith :Jesus ;
+    :description "a woman who contributed to Jesus' support"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Joanna,
+        :MaryMagdalene ;
+    :religiousBelief :Christianity .
+
+:Syntyche a :Woman ;
+    rdfs:label "Syntyche"@en ;
+    :collaboratesWith :Clement,
+        :Euodia,
+        :Paul ;
+    :description "a Philippian Christian who worked alongside Paul"@en ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Philippi .
+
+:Trophimus a :Man ;
+    rdfs:label "Trophimus"@en ;
+    :collaboratesWith :Aristarchus,
+        :GaiusOfDerbe,
+        :Secundus,
+        :Sopater .
+
+:Tryphaena a :Woman ;
+    rdfs:label "Tryphaena"@en ;
+    :description "a \"worker in the Lord\" in Rome"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla,
+        :Tryphosa ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Tryphosa a :Woman ;
+    rdfs:label "Tryphosa"@en ;
+    :description "a \"worker in the Lord\" in Rome"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul,
+        :Priscilla,
+        :Tryphaena ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Rome .
+
+:Tychicus a :Man ;
+    rdfs:label "Tychicus"@en ;
+    :collaboratesWith :Aristarchus,
+        :GaiusOfDerbe,
+        :Secundus,
+        :Sopater .
+
+:Zerah a :Man ;
+    rdfs:label "Zerah"@en ;
+    :childOf :Judah,
+        :Tamar ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :siblingOf :Perez .
+
+:Zerubbabel a :Man ;
+    rdfs:label "Zerubbabel"@en ;
+    :childOf :Shealtiel ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Abiud,
+        :Rhesa .
+
+:AbijahSonOfRehoboam a :Man ;
+    rdfs:label "Abijah"@en ;
+    :childOf :Rehoboam ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :occupation "king of Judah"@en ;
+    :parentOf :Asaph ;
+    :relativeOf :Asaph,
+        :Rehoboam ;
+    rdfs:comment "His occupation as king comes from Old Testament sources, 2Chr.12-13."@en .
+
+:Achaicus a :Man ;
+    rdfs:label "Achaicus"@en ;
+    :collaboratesWith :Fortunatus,
+        :Paul,
+        :Stephanas ;
+    :description "A member of Corinthian church who visited the Apostle Paul in Ephesus, perhaps bearing a letter to him."^^xsd:string ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    :visitedPlace :Ephesus ;
+    rdfs:comment "His residence in Corinth and visit to Ephesus follow from Paul's statement in 1Cor.16.17, and the assumption that Paul was in Ephesus when he wrote 1 Corinthians. "^^xsd:string .
+
+:AnaniasTheHighPriest a :Man ;
+    rdfs:label "Ananias"@en ;
+    :collaboratesWith :Tertullus ;
+    :description "Jewish High Priest during the time of the Apostle Paul "^^xsd:string ;
+    :enemyOf :Paul ;
+    :ethnicity :Judean,
+        :Levite ;
+    :knows :Felix ;
+    :memberOf :Sanhedrin ;
+    :occupation "High priest"^^xsd:string ;
+    rdfs:comment "ISBE describes him as a Sadducee, though it's not clear why."^^xsd:string .
+
+:Bernice a :Woman ;
+    rdfs:label "Bernice"@en ;
+    :childOf :HerodAgrippaI ;
+    :description "a daughter of Herod Agrippa I who heard Paul's defense to her brother, Herod Agrippa II"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :siblingOf :Drusilla,
+        :HerodAgrippaII ;
+    rdfs:comment "Smith notes that Bernice \"lived  under circumstances of great suspicion\" with her brother Herod Agrippa II, i.e. they may have had an incestuous relationship. "@en .
+
+:Boaz a :Man ;
+    rdfs:label "Boaz"@en ;
+    :childOf :Rahab,
+        :Salmon ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Obed ;
+    :spouseOf :Ruth .
+
+:Eunice a :Woman ;
+    rdfs:label "Eunice"@en ;
+    :childOf :Lois ;
+    :collaboratesWith :Paul ;
+    :description "the mother of Timothy"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Timothy ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Lystra ;
+    rdfs:comment "Eunice's residence in Lystra is implied by Acts.16.1, though Derbe is also possible. Her Christian faith is strongly implied by Paul's commendation of it in 2Tim.1.5. "@en .
+
+:Fortunatus a :Man ;
+    rdfs:label "Fortunatus"@en ;
+    :collaboratesWith :Achaicus,
+        :Paul,
+        :Stephanas ;
+    :description "A member of Corinthian church who visited the Apostle Paul in Ephesus, perhaps bearing a letter to him."^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    :visitedPlace :Ephesus ;
+    rdfs:comment "His residence in Corinth and visit to Ephesus follow from Paul's statement in 1Cor.16.17, and the assumption that Paul was in Ephesus when he wrote 1 Corinthians. "^^xsd:string .
+
+:GaiusOfMacedonia a :Man ;
+    rdfs:label "Gaius"@en ;
+    :collaboratesWith :Aristarchus,
+        :Paul ;
+    :description "a traveling companion of Paul's"^^xsd:string ;
+    :ethnicity :Macedonian ;
+    :hasOnlyGenealogyMention false ;
+    :possiblySamePersonAs :GaiusOfDerbe ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Ephesus ;
+    rdfs:comment "It seems likely this Gaius was a Christian since he was Paul's \"companion in travel\", though this is not explicitly stated. "@en .
+
+:Gamaliel a :Man ;
+    rdfs:label "Gamaliel"@en ;
+    :description "a respected Jewish teacher whom Paul studied under"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Paul ;
+    :memberOf :Pharisees,
+        :Sanhedrin ;
+    :nativePlace :Israel ;
+    :occupation "teacher of the Jewish Law"@en ;
+    :religiousBelief :Judaism,
+        :Phariseeism ;
+    :residentPlace :Jerusalem .
+
+:JohntheBaptist a :Man ;
+    rdfs:label "John"@en,
+        "John the Baptist"@en ;
+    :childOf :Elizabeth,
+        :Zechariah ;
+    :collaboratesWith :Andrew,
+        :SimonPeter ;
+    :ethnicity :Levite ;
+    rdfs:comment """John certainly understood Jesus to be the Messiah and was a person of faith, but he cannot be accounted a Christian since Jesus' ministry was not yet accomplished when he was beheaded. 
+The use of the name Elijah to refer to John the Baptist is figurative."""^^xsd:string .
+
+:Judah a :Man ;
+    rdfs:label "Judah"@en ;
+    :childOf :Jacob ;
+    :description "One of the 12 Patriarchs of Israel, after whom the land of Judea took its name."^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Perez,
+        :Zerah ;
+    :siblingOf :Gad ;
+    rdfs:comment """Tamar was not actually his spouse, but his daughter-in-law (Gen 38).
+"""^^xsd:string .
+
+:Judaism a :ReligiousBeliefSystem ;
+    rdfs:label "Judaism"@en ;
+    rdfs:comment "This is distinct from Jewish as an ethnic heritage, which implies birth: one can have a ReligiousBelief of Judaism through conversion, despite not having Jewish ethnicity. Those who convert to other beliefs (most notably for the New Testament, Christianity) are typically designated as having Jewish ethnicity, but Christianity as a ReligiousBelief. There is no implication of faithful devotion to the Jewish faith. "@en .
+
+:Levite a :EthnicityAttribute ;
+    rdfs:label "Levite"@en ;
+    :ethnicityOf :Abiathar,
+        :AbijahthePriest,
+        :AnaniasTheHighPriest,
+        :Barnabas,
+        :JohntheBaptist ;
+    rdfs:comment "All Levites are Jewish by definition."@en .
+
+:Macedonia a :StateOrProvince ;
+    rdfs:label "Macedonia"@en ;
+    :subregion :Amphipolis,
+        :Apollonia,
+        :Berea,
+        :Thessalonica ;
+    :visitedPlaceOf :Erastus .
+
+:MaryMotherOfJohnMark a :Woman ;
+    rdfs:label "Mary"@en ;
+    :description "a woman to whose house Peter came after his release from prison"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Rhoda ;
+    :parentOf :JohnMark ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Jerusalem ;
+    :siblingOf :Barnabas .
+
+:Perez a :Man ;
+    rdfs:label "Perez"@en ;
+    :childOf :Judah,
+        :Tamar ;
+    :description "One of the ancestors of Jesus mentioned in Matthew's geneaology"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention true ;
+    :parentOf :Hezron ;
+    :siblingOf :Zerah .
+
+:Sanhedrin a :ReligiousOrganization ;
+    rdfs:label "Sanhedrin"@en ;
+    :member :AlexanderOfTheSanhedrin,
+        :AnaniasTheHighPriest,
+        :Annas,
+        :Gamaliel,
+        :JohnOfTheSanhedrin ;
+    rdfs:comment "The Jewish supreme council"@en .
+
+:Sapphira a :Woman ;
+    rdfs:label "Sapphira"@en ;
+    :description """a member of the early church who misrepresented a gift and died as a 
+    consequence"""@en ;
+    :ethnicity :Jewish ;
+    :hasAntagonist :SimonPeter ;
+    :hasOnlyGenealogyMention false ;
+    :knows :SimonPeter ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Jerusalem ;
+    :spouseOf :Ananias .
+
+:Silas a :Man ;
+    rdfs:label "Silas"@en ;
+    :collaboratesWith :Barnabas ;
+    :hasAntagonist :Bar-Jesus .
+
+:Stephanas a :Man ;
+    rdfs:label "Stephanas"@en ;
+    :collaboratesWith :Achaicus,
+        :Fortunatus,
+        :Paul ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    :visitedPlace :Ephesus ;
+    rdfs:comment "His residence in Corinth and visit to Ephesus follow from Paul's statement in 1Cor.16.17, and the assumption that Paul was in Ephesus when he wrote 1 Corinthians. "@en .
+
+:Abraham a :Man ;
+    rdfs:label "Abraham"@en,
+        "Abram"@en ;
+    :childOf :Terah ;
+    :description "The founder of the Hebrew nation."^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Isaac ;
+    :residentPlace :Canaan ;
+    :spouseOf :Sarah .
+
+:Apollos a :Man ;
+    rdfs:label "Apollos"@en ;
+    :collaboratesWith :Aquila,
+        :Paul,
+        :Priscilla ;
+    :description "an eloquent evangelist whose ministry was initially based only on the teachings of John the Baptist"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Alexandria ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Corinth,
+        :Ephesus .
+
+:Drusilla a :Woman ;
+    rdfs:label "Drusilla"@en ;
+    :childOf :HerodAgrippaI ;
+    :description "wife of Felix"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :residentPlace :Caesarea ;
+    :siblingOf :Bernice,
+        :HerodAgrippaII ;
+    :spouseOf :Felix ;
+    rdfs:comment "Drusilla's locations are inferred from those of her husband. According to Josephus, she was the daughter of Herod Agrippa I. "^^xsd:string .
+
+:Elizabeth a :Woman ;
+    rdfs:label "Elizabeth"@en ;
+    :description "the mother of John the Baptist"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Judea ;
+    :parentOf :JohntheBaptist ;
+    :relativeOf :Mary ;
+    :religiousBelief :Judaism ;
+    :residentPlace :Judea ;
+    :spouseOf :Zechariah ;
+    rdfs:comment "Elizabeth was a kinswoman to Mary the mother of Jesus. Luke's gospel records that Mary visited her in a town in Judah, and that she was \"of the daughters of Aaron\"."@en .
+
+:Erastus a :Man ;
+    rdfs:label "Erastus"@en ;
+    :collaboratesWith :Paul,
+        :Timothy ;
+    :description "a travelling companion of Paul"@en ;
+    :hasOnlyGenealogyMention false ;
+    :possiblySamePersonAs :ErastusTheTreasurer ;
+    :visitedPlace :Corinth,
+        :Ephesus,
+        :Macedonia ;
+    rdfs:comment "There are two references to this Erastus: it's possible they represent two different people. See also the comment on ErastusTheTreasurer.	"@en .
+
+:Isaac a :Man ;
+    rdfs:label "Isaac"@en ;
+    :childOf :Abraham,
+        :Sarah ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Esau,
+        :Jacob ;
+    :spouseOf :Rebecca .
+
+:Levi a :Man ;
+    rdfs:label "Levi"@en ;
+    :childOf :AlphaeusFatherOfLevi ;
+    :collaboratesWith :Andrew ;
+    :description "One of Jesus' twelve apostles"@en ;
+    :ethnicity :Galilean ;
+    :occupation "tax collector"^^xsd:string ;
+    :siblingOf :Gad ;
+    rdfs:comment "One of the Twelve, also known as Matthew. "@en ;
+    owl:differentFrom :LeviSonOfMelki,
+        :LeviSonOfSimeon .
+
+:MaryWifeOfClopas a :Woman ;
+    rdfs:label "Mary"@en ;
+    :collaboratesWith :Jesus ;
+    :description "A follower of Jesus who was present at the crucifixion"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :MaryMagdalene,
+        :Salome ;
+    :religiousBelief :Christianity ;
+    :siblingOf :Mary ;
+    :spouseOf :Alphaeus ;
+    rdfs:comment "Comparing the Gospel accounts in John.19.25 and Mark.15.40, this Mary appears to be the same woman as the mother of James and Joseph/Joses, and therefore sister of Mary the mother of Jesus."@en .
+
+:Salome a :Woman ;
+    rdfs:label "Salome"@en ;
+    :collaboratesWith :Jesus ;
+    :description "one of the woman who came to annoint Jesus' body after his crucifixion"@en ;
+    :hasOnlyGenealogyMention false ;
+    :knows :MaryMagdalene,
+        :MaryWifeOfClopas ;
+    :parentOf :JamesSonOfZebedee,
+        :JohnSonOfZebedee ;
+    :religiousBelief :Christianity ;
+    :spouseOf :Zebedee ;
+    rdfs:comment """Matthew and Mark's accounts of the crucifixion together identify Salome as the mother of the sons of Zebedee. 
+This is also the traditional name of the daughter of Herodias, whose dance before King Herod led to the beheading of John the Baptist. But this woman is not named in the New Testament. """@en .
+
+:AlexanderOfTheSanhedrin a :Man ;
+    rdfs:label "Alexander"@en ;
+    :collaboratesWith :JohnOfTheSanhedrin ;
+    :description "A relative of Annas the High Priest who was present when Peter and John were questioned about healing a lame man"^^xsd:string ;
+    :enemyOf :JohnSonOfZebedee,
+        :SimonPeter ;
+    :ethnicity :Judean ;
+    :hasOnlyGenealogyMention false ;
+    :memberOf :Sanhedrin ;
+    :relativeOf :Annas,
+        :JohnOfTheSanhedrin .
+
+:Felix a :Man ;
+    rdfs:label "Felix"@en ;
+    :description "governor of Judea during the time when Paul was arrested in the Temple"^^xsd:string ;
+    :enemyOf :Paul ;
+    :ethnicity :Roman ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "governor of Judea"^^xsd:string ;
+    :residentPlace :Caesarea ;
+    :spouseOf :Drusilla ;
+    rdfs:comment "Properly Antonius Felix"^^xsd:string .
+
+:Roman a :EthnicityAttribute ;
+    rdfs:label "Roman"@en ;
+    :ethnicityOf :CaesarAugustus,
+        :CaesarNero,
+        :Cornelius,
+        :Felix,
+        :Festus,
+        :Gallio,
+        :TiberiusCaesar .
+
+:Sarah a :Woman ;
+    rdfs:label "Sarah"@en ;
+    :antagonistOf :Hagar ;
+    :childOf :Terah ;
+    :description "the wife of Abraham and an example of faith"@en ;
+    :ethnicity :Jewish ;
+    :hasAntagonist :Hagar ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Isaac ;
+    :residentPlace :Canaan ;
+    :spouseOf :Abraham ;
+    rdfs:comment "An important Old Testament figure. Curiously enough, both Abraham and Sarah are described as having Terah as father, presumably by different mothers. "@en .
+
+:Sopater a :Man ;
+    rdfs:label "Sopater"@en ;
+    :childOf :Pyrrhus ;
+    :collaboratesWith :Aristarchus,
+        :GaiusOfDerbe,
+        :Secundus,
+        :Timothy,
+        :Trophimus,
+        :Tychicus .
+
+:Annas a :Man ;
+    rdfs:label "Annas"@en ;
+    :collaboratesWith :Caiaphas,
+        :JohnOfTheSanhedrin ;
+    :description "Jewish high-priest (prior to Jesus' ministry)"^^xsd:string ;
+    :enemyOf :JohnSonOfZebedee,
+        :SimonPeter ;
+    :memberOf :Sanhedrin ;
+    :occupation "Priestly leader"^^xsd:string ;
+    :relativeOf :AlexanderOfTheSanhedrin,
+        :Caiaphas,
+        :JohnOfTheSanhedrin ;
+    rdfs:comment "Annas' highpriesthood ended in 15 AD, but he continued to be described as high-priest after his son-in-law, Caiaphas, had taken the position."@en .
+
+:Aquila a :Man ;
+    rdfs:label "Aquila"@en ;
+    :collaboratesWith :Apollos,
+        :Paul ;
+    :description "a tentmaked converted by Paul who, together with his wife, became evangelists"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Pontus ;
+    :occupation "tentmaker"^^xsd:string ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth,
+        :Ephesus,
+        :Rome ;
+    :spouseOf :Priscilla .
+
+:David a :Man ;
+    rdfs:label "David"@en ;
+    :childOf :Jesse ;
+    :collaboratesWith :Uriah ;
+    :description "Israel's greatest king; author of many of the Old Testament Psalms"^^xsd:string ;
+    :enemyOf :Uriah ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :occupation "king of Israel"@en ;
+    :parentOf :Nathan,
+        :Solomon ;
+    :spouseOf :Bathsheba .
+
+:JohnOfTheSanhedrin a :Man ;
+    rdfs:label "John"@en ;
+    :collaboratesWith :AlexanderOfTheSanhedrin,
+        :Annas ;
+    :description "A relative of Annas the High Priest who was present when Peter and John were questioned about healing a lame man"^^xsd:string ;
+    :enemyOf :JohnSonOfZebedee,
+        :SimonPeter ;
+    :ethnicity :Jewish ;
+    :memberOf :Sanhedrin ;
+    :relativeOf :AlexanderOfTheSanhedrin,
+        :Annas .
+
+:Secundus a :Man ;
+    rdfs:label "Secundus"@en ;
+    :collaboratesWith :Aristarchus,
+        :GaiusOfDerbe,
+        :Paul,
+        :Sopater,
+        :Timothy,
+        :Trophimus,
+        :Tychicus ;
+    :description "a Thessalonian companion of Paul's"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Thessalonica ;
+    rdfs:comment "Luke describes him as \"of the Thessalonians\", which could mean either his residence or his origin. "^^xsd:string .
+
+:MaryMagdalene a :Woman ;
+    rdfs:label "Mary Magdalene"@en ;
+    :collaboratesWith :Jesus,
+        :JohnSonOfZebedee,
+        :SimonPeter ;
+    :description "A woman from whom seven demons had been exorcised"^^xsd:string ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Mary,
+        :MaryWifeOfClopas,
+        :Salome,
+        :Susanna ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Galilee ;
+    rdfs:comment "From Magdala, a town in Galilee not mentioned in the New Testament"@en .
+
+:Aristarchus a :Man ;
+    rdfs:label "Aristarchus"@en ;
+    :collaboratesWith :GaiusOfDerbe,
+        :GaiusOfMacedonia,
+        :Paul,
+        :Secundus,
+        :Sopater,
+        :Timothy,
+        :Trophimus,
+        :Tychicus ;
+    :description "a traveling companion of Paul"@en ;
+    :ethnicity :Macedonian ;
+    :hasOnlyGenealogyMention false ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Ephesus .
+
+:Ephesus a :City ;
+    rdfs:label "Ephesus"@en ;
+    :location :EphesusGeodata ;
+    :residentPlaceOf :Aquila,
+        :Paul,
+        :Priscilla ;
+    :visitedPlaceOf :Achaicus,
+        :Apollos,
+        :Aristarchus,
+        :Erastus,
+        :Fortunatus,
+        :GaiusOfMacedonia,
+        :Stephanas .
+
+:GaiusOfDerbe a :Man ;
+    rdfs:label "Gaius"@en ;
+    :collaboratesWith :Aristarchus,
+        :Paul,
+        :Secundus,
+        :Sopater,
+        :Timothy,
+        :Trophimus,
+        :Tychicus ;
+    :description "a travelling companion of Paul's"^^xsd:string ;
+    :hasOnlyGenealogyMention false ;
+    :nativePlace :Derbe ;
+    :possiblySamePersonAs :GaiusOfMacedonia ;
+    :religiousBelief :Christianity ;
+    :visitedPlace :Troas ;
+    rdfs:comment "Luke describes him as \"Gaius of Derbe\": that could be either his place of birth, or place of residence. It's not clear whether he (and his other companions) accompanied Paul all the way to Jerusalem. Gaius being a common name, it seems plausible that the others of the same name are distinct individuals, though the closest possible identification is with GaiusOfMacedonia (see New Bible Dictionary for discussion)."^^xsd:string .
+
+:Barnabas a :Man ;
+    rdfs:label "Barnabas"@en ;
+    :collaboratesWith :JohnMark,
+        :JudasOfAntioch,
+        :LuciusOfCyrene,
+        :Manaen,
+        :Paul,
+        :Silas,
+        :SimeonNiger,
+        :SimonPeter ;
+    :description "a close companion of the Apostle Paul"^^xsd:string ;
+    :ethnicity :Levite ;
+    :occupation "apostle"^^xsd:string ;
+    :relativeOf :JohnMark ;
+    :siblingOf :MaryMotherOfJohnMark .
+
+:Galilee a :StateOrProvince ;
+    rdfs:label "Galilee"@en ;
+    :residentPlaceOf :MaryMagdalene ;
+    :subregion :Bethsaida,
+        :Cana,
+        :Capernaum,
+        :Chorazin,
+        :Gennesaret,
+        :Nain,
+        :Nazareth,
+        :SeaOfGalilee,
+        :Tiberias ;
+    :subregionOf :Israel .
+
+:HerodAntipas a :Man ;
+    rdfs:label "Herod"@en,
+        "Herod the tetrarch"@en ;
+    :childOf :HerodTheGreat ;
+    :collaboratesWith :PontiusPilate ;
+    :description "ruler of Judea during Jesus' adult life"^^xsd:string ;
+    :enemyOf :Jesus ;
+    :ethnicity :Samaritan ;
+    :occupation "tetrarch"^^xsd:string ;
+    :relativeOf :Aretas ;
+    :siblingOf :Archelaus,
+        :PhilipSonOfHerod ;
+    :spouseOf :Herodias ;
+    :visitedPlace :Jerusalem ;
+    rdfs:comment "Herod the Great was Idumean, and Antipas' mother was Samaritan. According to extra-biblical history, he was educated in Rome. "@en .
+
+:Mary a :Woman ;
+    rdfs:label "Mary"@en ;
+    :description "the mother of Jesus"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :JohnSonOfZebedee,
+        :MaryMagdalene ;
+    :parentOf :Jesus ;
+    :relativeOf :Elizabeth ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Egypt,
+        :Nazareth ;
+    :siblingOf :MaryWifeOfClopas ;
+    :spouseOf :Joseph ;
+    :visitedPlace :Bethlehem,
+        :Cana,
+        :Jerusalem ;
+    rdfs:comment "See the note on Joseph for why Mary is childOf Heli. She is described by John as standing at the foot of Jesus' cross with two other Marys. Her relationship to John assumes he is the \"beloved discipled\" described in John's gospel. "@en .
+
+:Galilean a :EthnicityAttribute ;
+    rdfs:label "Galilean"@en ;
+    :ethnicityOf :Alphaeus,
+        :AlphaeusFatherOfLevi,
+        :Andrew,
+        :Bartholomew,
+        :JamesSonOfAlphaeus,
+        :Levi,
+        :Philip,
+        :SimonPeter,
+        :SimonTheZealot,
+        :Thomas ;
+    rdfs:comment "In the time of Christ, Galilee was home to those of Jewish descent as well non-Jews. As used in the New Testament, the term is used primarily of Jews in distinction to Judean and Samaritan, the other major divisions of Jewish Palestine. It is therefore (in practice) a sub-ethnicity of Jewish."@en ;
+    owl:differentFrom :Judean,
+        :Samaritan .
+
+:JohnSonOfZebedee a :Man ;
+    rdfs:label "John"@en ;
+    :childOf :Salome,
+        :Zebedee ;
+    :collaboratesWith :Andrew,
+        :Demetrius,
+        :GaiusTheBeloved,
+        :MaryMagdalene ;
+    :description "One of Jesus' twelve apostles"^^xsd:string ;
+    :hasAntagonist :Diotrephes ;
+    :hasEnemy :AlexanderOfTheSanhedrin,
+        :Annas,
+        :JohnOfTheSanhedrin ;
+    :siblingOf :JamesSonOfZebedee .
+
+:Corinth a :City ;
+    rdfs:label "Corinth"@en ;
+    :location :CorinthGeodata ;
+    :residentPlaceOf :Achaicus,
+        :Aquila,
+        :Fortunatus,
+        :GaiusOfCorinth,
+        :Jason,
+        :Lucius,
+        :Priscilla,
+        :Sosipater,
+        :Stephanas,
+        :Tertius,
+        :Timothy ;
+    :visitedPlaceOf :Apollos,
+        :Erastus .
+
+:Gad a :Man ;
+    rdfs:label "Gad"@en ;
+    :childOf :Jacob ;
+    :description "One of the 12 Patriarchs of Israel"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :siblingOf :Asher,
+        :Benjamin,
+        :Issachar,
+        :JosephThePatriarch,
+        :Judah,
+        :Levi,
+        :ManassehThePatriarch,
+        :Naphtali,
+        :Reuben,
+        :SimeonThePatriarch,
+        :Zebulun ;
+    rdfs:comment "His mother Zilpah, Leah's servant, is not named in the New Testament. "^^xsd:string .
+
+:Jacob a :Man ;
+    rdfs:label "Israel"@en,
+        "Jacob"@en ;
+    :childOf :Isaac,
+        :Rebecca ;
+    :description "The patriarch of the nation of Israel, son of Isaac and Abraham"@en ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :parentOf :Asher,
+        :Benjamin,
+        :Gad,
+        :JosephThePatriarch,
+        :Judah,
+        :ManassehThePatriarch,
+        :SimeonThePatriarch ;
+    :siblingOf :Esau ;
+    :spouseOf :Rachel ;
+    rdfs:comment "Israel becomes a metonym describing the nation of descendants from Jacob, so it is used both for a individual, a nation, and the members of that nation. "^^xsd:string ;
+    owl:differentFrom :JacobSonOfMatthan .
+
+:Jerusalem a :City ;
+    rdfs:label "Jerusalem"@en ;
+    :location :JerusalemGeodata ;
+    :residentPlaceOf :ClaudiusLysias,
+        :Gamaliel,
+        :MaryMotherOfJohnMark,
+        :Rhoda,
+        :Sapphira ;
+    :subregion :Bethesda,
+        :Siloam ;
+    :subregionOf :Judea ;
+    :visitedPlaceOf :Cleopas,
+        :Festus,
+        :HerodAntipas,
+        :Joanna,
+        :Mary .
+
+:Jesus a :SonOfGod ;
+    rdfs:label "Jesus"@en ;
+    :childOf :Joseph,
+        :Mary ;
+    :collaboratesWith :Andrew,
+        :Cleopas,
+        :Joanna,
+        :MaryMagdalene,
+        :MaryWifeOfClopas,
+        :Salome,
+        :Susanna ;
+    :description "Jesus Christ, the Messiah and Son of God"^^xsd:string ;
+    :hasEnemy :HerodAntipas ;
+    rdfs:comment "As the central figure of the New Testament, it is impossible to incorporate all the information about Jesus in this limited framework. "@en .
+
+:Andrew a :Man ;
+    rdfs:label "Andrew"@en ;
+    :childOf :JonahOfBethsaida ;
+    :collaboratesWith :Bartholomew,
+        :JamesSonOfAlphaeus,
+        :JamesSonOfZebedee,
+        :Jesus,
+        :JohnSonOfZebedee,
+        :JohntheBaptist,
+        :Levi,
+        :Philip,
+        :SimonPeter,
+        :Thaddaeus,
+        :Thomas ;
+    :description "One of Jesus' twelve apostles, and the first one called."^^xsd:string ;
+    :ethnicity :Galilean ;
+    :occupation "apostle"^^xsd:string,
+        "fisherman"^^xsd:string ;
+    :relativeOf :SimonTheZealot ;
+    :siblingOf :SimonPeter ;
+    rdfs:comment "One could infer that Andrew followed Jesus back from Bethany to Galilee in his early ministry, and therefore visited Cana and Capernaum. But this is not explicitly described."@en .
+
+:Timothy a :Man ;
+    rdfs:label "Timothy"@en ;
+    :childOf :Eunice ;
+    :collaboratesWith :Aristarchus,
+        :Erastus,
+        :GaiusOfDerbe,
+        :Paul,
+        :Secundus,
+        :Sopater ;
+    :ethnicity :Greek,
+        :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Jason,
+        :Lucius,
+        :Sosipater ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth ;
+    rdfs:comment "Timothy's residence in Corinth follows from the close of Paul's letter to the Romans, assumed to have been written from Corinth. "@en .
+
+:Judea a :StateOrProvince ;
+    rdfs:label "Judea"@en ;
+    :nativePlaceOf :Elizabeth ;
+    :residentPlaceOf :Elizabeth ;
+    :subregion :Antipatris,
+        :Arimathea,
+        :Azotus,
+        :Bethany,
+        :Bethlehem,
+        :Bethphage,
+        :Emmaus,
+        :Ephraim,
+        :Gaza,
+        :Jericho,
+        :Jerusalem,
+        :Joppa,
+        :Lydda,
+        :Ramah,
+        :Sharon ;
+    :subregionOf :Israel .
+
+:SimonPeter a :Man ;
+    rdfs:label "Simon Peter"@en ;
+    :antagonistOf :Ananias,
+        :Sapphira ;
+    :childOf :JonahOfBethsaida ;
+    :collaboratesWith :Andrew,
+        :Barnabas,
+        :JohntheBaptist,
+        :JosephBarsabbas,
+        :MaryMagdalene,
+        :SimonTheTanner ;
+    :description "one of Jesus' twelve apostles"^^xsd:string ;
+    :ethnicity :Galilean ;
+    :hasEnemy :AlexanderOfTheSanhedrin,
+        :Annas,
+        :JohnOfTheSanhedrin ;
+    :knows :Aeneas,
+        :Ananias,
+        :Sapphira,
+        :Tabitha ;
+    :occupation "apostle"^^xsd:string,
+        "fisherman"^^xsd:string ;
+    :siblingOf :Andrew ;
+    rdfs:comment "The main definition for the Apostle Peter."^^xsd:string .
+
+:Rome a :City ;
+    rdfs:label "Rome"@en ;
+    :residentPlaceOf :Ampliatus,
+        :Andronicus,
+        :Apelles,
+        :Aquila,
+        :Aristobulus,
+        :Asyncritus,
+        :Claudia,
+        :Epaenetus,
+        :Eubulus,
+        :Hermas,
+        :Hermes,
+        :Herodion,
+        :Julia,
+        :Junia,
+        :MaryOfRome,
+        :Narcissus,
+        :Nereus,
+        :Olympas,
+        :Patrobas,
+        :Persis,
+        :Philologus,
+        :Phlegon,
+        :Priscilla,
+        :RufusOfRome,
+        :Stachys,
+        :Tryphaena,
+        :Tryphosa,
+        :Urbanus .
+
+:Priscilla a :Woman ;
+    rdfs:label "Prisca"@en,
+        "Priscilla"@en ;
+    :collaboratesWith :Apollos,
+        :Paul ;
+    :ethnicity :Jewish ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Ampliatus,
+        :Andronicus,
+        :Apelles,
+        :Asyncritus,
+        :Epaenetus,
+        :Hermas,
+        :Hermes,
+        :Herodion,
+        :Julia,
+        :Junia,
+        :MaryOfRome,
+        :Nereus,
+        :Olympas,
+        :Patrobas,
+        :Persis,
+        :Philologus,
+        :Phlegon,
+        :Rufus,
+        :Stachys,
+        :Tryphaena,
+        :Tryphosa,
+        :Urbanus ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Corinth,
+        :Ephesus,
+        :Rome ;
+    :spouseOf :Aquila ;
+    rdfs:comment "Prisca is the diminutive form of Priscilla. Brownrigg notes that Paul always uses this form."^^xsd:string .
+
+:Christianity a :ReligiousBeliefSystem ;
+    rdfs:label "Christianity"@en ;
+    rdfs:comment "Not referenced as a belief system in the New Testament."@en .
+
+:Paul a :Man ;
+    rdfs:label "Paul"@en ;
+    :collaboratesWith :Achaicus,
+        :Agabus,
+        :AnaniasOfDamascus,
+        :Andronicus,
+        :Apollos,
+        :Aquila,
+        :Aristarchus,
+        :Artemas,
+        :Barnabas,
+        :Carpus,
+        :Clement,
+        :Crescens,
+        :Demas,
+        :Epaphras,
+        :Epaphroditus,
+        :Erastus,
+        :Eubulus,
+        :Eunice,
+        :Euodia,
+        :Fortunatus,
+        :GaiusOfCorinth,
+        :GaiusOfDerbe,
+        :GaiusOfMacedonia,
+        :JudasOfAntioch,
+        :LuciusOfCyrene,
+        :Lydia,
+        :Manaen,
+        :Nympha,
+        :Phoebe,
+        :Priscilla,
+        :Secundus,
+        :SimeonNiger,
+        :Stephanas,
+        :Syntyche,
+        :Tertius,
+        :Timothy,
+        :Urbanus ;
+    :hasAntagonist :Bar-Jesus ;
+    :hasEnemy :AlexanderTheCoppersmith,
+        :AnaniasTheHighPriest,
+        :DemetriusTheSilversmith,
+        :Felix,
+        :Tertullus ;
+    :hasOnlyGenealogyMention false ;
+    :knows :Ampliatus,
+        :Apelles,
+        :Asyncritus,
+        :Epaenetus,
+        :Hermas,
+        :Hermes,
+        :Hermogenes,
+        :Herodion,
+        :Julia,
+        :MaryOfRome,
+        :Nereus,
+        :Olympas,
+        :Patrobas,
+        :Persis,
+        :Philologus,
+        :Phlegon,
+        :Phygelus,
+        :Stachys,
+        :Tryphaena,
+        :Tryphosa ;
+    :occupation "apostle"^^xsd:string,
+        "tentmaker"^^xsd:string ;
+    :religiousBelief :Christianity ;
+    :residentPlace :Ephesus ;
+    rdfs:comment "The Apostle Paul was known earlier as Saul: he was given the name Paul when he was converted."@en .
+
+:Jewish a :EthnicityAttribute ;
+    rdfs:label "Jewish"@en ;
+    :ethnicityOf :Aaron,
+        :AbijahSonOfRehoboam,
+        :Abiud,
+        :Abraham,
+        :Achim,
+        :Addi,
+        :Admin,
+        :Ahaz,
+        :AlexanderOfEphesus,
+        :Amminadab,
+        :Amos,
+        :AmosSonOfNahum,
+        :Ananias,
+        :AnaniasOfDamascus,
+        :Anna,
+        :Aquila,
+        :Arni,
+        :Asaph,
+        :Asher,
+        :Azor,
+        :Bar-Jesus,
+        :Barabbas,
+        :Barachiah,
+        :Bathsheba,
+        :Benjamin,
+        :Bernice,
+        :Boaz,
+        :Caiaphas,
+        :Cosam,
+        :David,
+        :Drusilla,
+        :Eber,
+        :Eleazar,
+        :EliakimSonOfAbiud,
+        :EliakimSonOfMelea,
+        :Eliezer,
+        :Elijah,
+        :Elisha,
+        :Eliud,
+        :Elizabeth,
+        :Elmadam,
+        :Er,
+        :Esau,
+        :Esli,
+        :Eunice,
+        :Gad,
+        :Gamaliel,
+        :Gideon,
+        :Heli,
+        :Hezekiah,
+        :Hezron,
+        :Isaac,
+        :Jacob,
+        :Jannai,
+        :Jechoniah,
+        :Jehoshaphat,
+        :Jesse,
+        :Joanan,
+        :JohnOfTheSanhedrin,
+        :Jonam,
+        :Joram,
+        :Jorim,
+        :Josech,
+        :JosephBarsabbas,
+        :JosephSonOfJonam,
+        :JosephSonOfMattathias,
+        :JosephThePatriarch,
+        :JoshuaSonOfEliezer,
+        :Josiah,
+        :Jotham,
+        :Judah,
+        :JudahSonOfJoseph,
+        :LeviSonOfMelki,
+        :LeviSonOfSimeon,
+        :Lois,
+        :Maath,
+        :Manasseh,
+        :ManassehThePatriarch,
+        :Martha,
+        :Mary,
+        :MaryMagdalene,
+        :MaryMotherOfJohnMark,
+        :MaryOfBethany,
+        :MaryWifeOfClopas,
+        :Mattatha,
+        :MattathaisSonOfAmos,
+        :MattathiasSonOfSemein,
+        :MatthatSonOfLeviSonOfMelki,
+        :MatthatSonOfLeviSonOfSimeon,
+        :MelchiSonOfAddi,
+        :MelchiSonOfJannai,
+        :Melea,
+        :Menna,
+        :Naggai,
+        :Nahshon,
+        :Nahum,
+        :Nathan,
+        :Neri,
+        :Obed,
+        :Perez,
+        :Priscilla,
+        :Rachel,
+        :Ram,
+        :Rebecca,
+        :Rehoboam,
+        :Rhesa,
+        :Salmon,
+        :Sapphira,
+        :Sarah,
+        :Semein,
+        :Shealtiel,
+        :ShealtielSonOfNeri,
+        :SimeonSonOfJudah,
+        :SimeonThePatriarch,
+        :SimonOfCyrene,
+        :Solomon,
+        :Susanna,
+        :Tamar,
+        :Timothy,
+        :Uzziah,
+        :Zadok,
+        :ZechariahSonOfBarachiah,
+        :Zerah,
+        :Zerubbabel ;
+    rdfs:comment "The notion of 'Jewish' as an ethnicity is problematic given the long history of God's chosen people and their many circumstances. Here it refers broadly to the Jewish identity, and is applied to all those from Abraham through Peter and Paul who would designate themselves as Jewish. In particular, no attempt is made to distinguish pre-Mosaic Jewish ethnicity from later forms. Israelite is only used a few times in the New Testament, and in those instances, it is treated synonymously with Jewish. "@en ;
+    owl:differentFrom :Canaanite,
+        :Egyptian,
+        :Ethiopian,
+        :Gentile .
+
