@@ -3,6 +3,10 @@ PyGREN -- Python Graph Engine
 Approved for Public Release; Distribution Unlimited. 13-3052
 Copyright ©2014 - The MITRE Corporation. All rights reserved.
 
+The authors' affiliation with The MITRE Corporation is provided for identification
+purposes only, and is not intended to convey or imply MITRE's concurrence with, or 
+support for, the positions, opinions or viewpoints expressed by the authors.
+
 PyGREN is a distributed graph database engine. It's based on top of Tornado and
 SQLAlchemy and implements a Bulk Synchronous Parallel system.
 http://en.wikipedia.org/wiki/Bulk_Synchronous_Parallel
